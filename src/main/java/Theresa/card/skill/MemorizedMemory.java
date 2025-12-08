@@ -14,21 +14,22 @@ public class MemorizedMemory extends AbstractTheresaCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public MemorizedMemory() {
-        super(ID, cardStrings.NAME, 3, cardStrings.DESCRIPTION, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
+        super(ID, cardStrings.NAME, 2, cardStrings.DESCRIPTION, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
         exhaust = true;
         SilkPatch.setSilkForPreview(this,new MindSilk());
+        shouldLocked = true;
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new MemorizedMemoryAction());
+        addToBot(new MemorizedMemoryAction(true));
     }
 
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(2);
+            upgradeBaseCost(1);
         }
     }
 }

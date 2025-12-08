@@ -17,6 +17,7 @@ public class TheCat extends AbstractTheresaCard {
     public TheCat() {
         super(ID,cardStrings.NAME,1,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.UNCOMMON,CardTarget.NONE);
         this.isInnate = true;
+        shouldLocked = true;
     }
 
     @Override

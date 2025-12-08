@@ -64,9 +64,9 @@ public class PlayCardAction extends AbstractGameAction {
                     dif = -(index+1)/2;
             }
             card.current_x =(float)Settings.WIDTH / 2.0F + 180 * dif * Settings.xScale;;
-            card.current_y = (float)Settings.HEIGHT / 2.0F + 150F * Settings.scale;
+            card.current_y = (float)Settings.HEIGHT / 2.0F + 300F * Settings.scale;
             card.target_x = (float)Settings.WIDTH / 2.0F + 180 * dif * Settings.xScale;
-            card.target_y = (float)Settings.HEIGHT / 2.0F + 150F * Settings.scale;
+            card.target_y = (float)Settings.HEIGHT / 2.0F + 300F * Settings.scale;
             card.targetAngle = 0.0F;
             card.lighten(false);
             card.drawScale = 0.32F;

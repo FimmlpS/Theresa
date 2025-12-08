@@ -1,7 +1,9 @@
 package Theresa.card.skill;
 
 import Theresa.action.BansheeAction;
+import Theresa.action.SpecialAnimationAction;
 import Theresa.card.AbstractTheresaCard;
+import Theresa.helper.AttackHelper;
 import Theresa.patch.OtherEnum;
 import Theresa.patch.SilkPatch;
 import Theresa.silk.TearSilk;
@@ -24,6 +26,7 @@ public class TheBanshee extends AbstractTheresaCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        addToBot(new SpecialAnimationAction(AttackHelper.ForCharacter.Banshee));
         addToBot(new BansheeAction(this.magicNumber));
     }
 

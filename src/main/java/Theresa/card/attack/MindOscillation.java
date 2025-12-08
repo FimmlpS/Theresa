@@ -1,5 +1,6 @@
 package Theresa.card.attack;
 
+import Theresa.action.MindOAction;
 import Theresa.action.SetSilkAction;
 import Theresa.card.AbstractTheresaCard;
 import Theresa.patch.SilkPatch;
@@ -28,6 +29,7 @@ public class MindOscillation extends AbstractTheresaCard {
         baseDamage = damage = 9;
         SilkPatch.setSilkWithoutTrigger(this,new MindSilk());
         this.selfRetain = true;
+        shouldLocked = true;
     }
 
     @Override
@@ -43,7 +45,7 @@ public class MindOscillation extends AbstractTheresaCard {
         addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,damage,damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
         AbstractCard c = triggerType();
         if(c!=null){
-            addToBot(new SetSilkAction(c,new MindSilk(),false,true));
+            addToBot(new MindOAction(c));
         }
     }
 

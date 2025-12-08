@@ -22,7 +22,8 @@ public class FutureStop extends AbstractTheresaCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new FutureStopAction(new Stop()));
-        addToBot(new PressEndTurnButtonAction());
+        if(!isInAutoplay)
+            addToBot(new PressEndTurnButtonAction());
     }
 
 

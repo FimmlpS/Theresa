@@ -55,21 +55,28 @@ public class Finale extends AbstractTheresaCard {
             return super.canUse(p,m);
         }
         for(AbstractCard c : AbstractDungeon.player.drawPile.group) {
-            if((c.type == CardType.ATTACK ||c.type==CardType.SKILL)&&SilkPatch.SilkCardField.silk.get(c) == null)
+            if((c.type == CardType.ATTACK ||c.type==CardType.SKILL)&&SilkPatch.SilkCardField.silk.get(c) == null){
+                cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
                 return false;
+            }
         }
         for(AbstractCard c : AbstractDungeon.player.discardPile.group) {
-            if((c.type == CardType.ATTACK ||c.type==CardType.SKILL)&&SilkPatch.SilkCardField.silk.get(c) == null)
+            if((c.type == CardType.ATTACK ||c.type==CardType.SKILL)&&SilkPatch.SilkCardField.silk.get(c) == null){
+                cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[1];
                 return false;
+            }
         }
         for(AbstractCard c : AbstractDungeon.player.hand.group) {
-            if((c.type == CardType.ATTACK ||c.type==CardType.SKILL)&&SilkPatch.SilkCardField.silk.get(c) == null)
+            if((c.type == CardType.ATTACK ||c.type==CardType.SKILL)&&SilkPatch.SilkCardField.silk.get(c) == null){
+                cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[2];
                 return false;
+            }
         }
-        for(AbstractCard c : DustPatch.dustManager.dustCards){
-            if((c.type == CardType.ATTACK ||c.type==CardType.SKILL)&&SilkPatch.SilkCardField.silk.get(c) == null)
-                return false;
-        }
+        //不判了 恼
+//        for(AbstractCard c : DustPatch.dustManager.dustCards){
+//            if((c.type == CardType.ATTACK ||c.type==CardType.SKILL)&&SilkPatch.SilkCardField.silk.get(c) == null)
+//                return false;
+//        }
         return super.canUse(p, m);
     }
 

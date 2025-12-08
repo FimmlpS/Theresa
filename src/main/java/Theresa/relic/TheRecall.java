@@ -1,6 +1,7 @@
 package Theresa.relic;
 
 import Theresa.helper.StringHelper;
+import Theresa.interfaces.LockedIt;
 import Theresa.power.buff.HatePower;
 import Theresa.power.buff.HopePower;
 import basemod.abstracts.CustomRelic;
@@ -9,7 +10,7 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 
-public class TheRecall extends CustomRelic {
+public class TheRecall extends CustomRelic implements LockedIt {
     public static final String ID = "theresa:TheRecall";
 
     public TheRecall() {
@@ -21,8 +22,16 @@ public class TheRecall extends CustomRelic {
     public void atTurnStartPostDraw() {
         this.flash();
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new HopePower(AbstractDungeon.player, 1), 1));
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new HatePower(AbstractDungeon.player, 1), 1));
+        int hopeAmt = 0;
+        int hateAmt = 0;
+        if(AbstractDungeon.player.getPower(HopePower.POWER_ID)!=null)
+            hopeAmt = AbstractDungeon.player.getPower(HopePower.POWER_ID).amount;
+        if(AbstractDungeon.player.getPower(HatePower.POWER_ID)!=null)
+            hateAmt = AbstractDungeon.player.getPower(HatePower.POWER_ID).amount;
+        if(hopeAmt<=hateAmt)
+            addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new HopePower(AbstractDungeon.player, 1), 1));
+        if(hateAmt<=hopeAmt)
+            addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new HatePower(AbstractDungeon.player, 1), 1));
     }
 
     @Override

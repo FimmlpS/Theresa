@@ -23,8 +23,10 @@ public class DeadBreath extends AbstractTheresaCard {
     public DeadBreath() {
         super(ID,cardStrings.NAME,1,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.UNCOMMON,CardTarget.SELF);
         baseBlock = block = 6;
+        baseMagicNumber = magicNumber = 1;
         SilkPatch.setSilkWithoutTrigger(this,new MindSilk());
         //this.exhaust = true;
+        shouldLocked = true;
     }
 
     @Override
@@ -45,7 +47,8 @@ public class DeadBreath extends AbstractTheresaCard {
         addToBot(new GainBlockAction(abstractPlayer, block));
         AbstractCard c = triggerType();
         if(c != null) {
-            SilkPatch.triggerSilk(SilkPatch.TriggerType.ALL,this, CardGroup.CardGroupType.HAND);
+            for(int i = 0; i < magicNumber; i++)
+                SilkPatch.triggerSilk(SilkPatch.TriggerType.ALL,this, CardGroup.CardGroupType.HAND);
             addToBot(new MakeTempCardInHandAction(this.makeSameInstanceOf(),1));
             this.exhaust = true;
         }
@@ -74,7 +77,7 @@ public class DeadBreath extends AbstractTheresaCard {
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
-            upgradeBlock(3);
+            upgradeMagicNumber(1);
         }
     }
 }

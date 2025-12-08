@@ -1,7 +1,9 @@
 package Theresa.card.attack;
 
 import Theresa.action.LessCopyAction;
+import Theresa.action.SpecialAnimationAction;
 import Theresa.card.AbstractTheresaCard;
+import Theresa.helper.AttackHelper;
 import Theresa.patch.SilkPatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -24,6 +26,7 @@ public class TheSwordsman extends AbstractTheresaCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        addToBot(new SpecialAnimationAction(AttackHelper.ForCharacter.Swordsman,false));
         addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,damage,damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
         addToBot(new LessCopyAction(this,1));
     }

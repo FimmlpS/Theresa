@@ -1,0 +1,235 @@
+{
+  "theresa:EchoismPower": {
+    "NAME": "Echoism",
+    "DESCRIPTIONS": [
+      "At the start of your turn, Linger additional #b",
+      " times."
+    ]
+  },
+  "theresa:PastDustPower": {
+    "NAME": "Dust of the Past",
+    "DESCRIPTIONS": [
+      "Whenever a card is transformed into Particle or Lingerd, you gain #b",
+      " Block."
+    ]
+  },
+  "theresa:YoreLingerPower": {
+    "NAME": "The Past Lingering",
+    "DESCRIPTIONS": [
+      "At the end of your turn, apply #b",
+      "  #yForget to all Particles."
+    ]
+  },
+  "theresa:HatePower": {
+    "NAME": "Sarkaz's Hatred",
+    "DESCRIPTIONS": [
+      "When you gain Hatred , deal #b",
+      " damage to all enemies(At most",
+      "). NL At the end of your turn, if your stacks of #rHatred are more than #gHopeness , Transform 1 #gHopeness into #rHatred ."
+    ]
+  },
+  "theresa:HopePower": {
+    "NAME": "Therasa's Hopeness",
+    "DESCRIPTIONS": [
+      "When you gain Hopeness, gain #b",
+      " Block (At most",
+      "). NL At the end of your turn, if your stacks of #rHopeness are more than #gHatred , Transform 1 #gHatred into #rHopeness ."
+    ]
+  },
+  "theresa:SilkPower": {
+    "NAME": "Endless Threads",
+    "DESCRIPTIONS": [
+      "The stats of your Thread is increased by #b",
+      " ."
+    ]
+  },
+  "theresa:GiftPower": {
+    "NAME": "Gift from Sanguinarch",
+    "DESCRIPTIONS": [
+      "The damage your #yPact: #yDuq'arael can deal is increased by #b",
+      " ."
+    ]
+  },
+  "theresa:SlowBurnPower": {
+    "NAME": "Penumbral Image",
+    "DESCRIPTIONS": [
+      "At the end of the turn, gain Necrosis equals to #b",
+      " times of the #ySlow ."
+    ]
+  },
+  "theresa:ThousandsWishPower": {
+    "NAME": "The Myriad Dreams",
+    "DESCRIPTIONS": [
+      "Every time you draw 13 cards, #yLinger #b",
+      " time. NL Now:"
+    ]
+  },
+  "theresa:IntoHistoryPower": {
+    "NAME": "Follow the History",
+    "DESCRIPTIONS": [
+      "Every time a card with Exhaust is #yLingered, add #b",
+      " random card with #yExhaust into your Particles zone.",
+      "Put your Particle into your hand after it is #Lingered , it cost #b",
+      " less energy in this turn."
+    ]
+  },
+  "theresa:DyingPower": {
+    "NAME": "Necrosis",
+    "DESCRIPTIONS": [
+      "This enemy's attcak is decreased by #b",
+      " %. If the Necrosis it have is more than its HP, kill it."
+    ]
+  },
+  "theresa:TimeToDiePower": {
+    "NAME": "Decay Countdown",
+    "DESCRIPTIONS": [
+      "Every time a card is #yExhausted or #yRemoved , apply #b",
+      " #yNecrosis to the enemy with the highest HP ."
+    ]
+  },
+  "theresa:DyingRosePower": {
+    "NAME": "Wither Rose",
+    "DESCRIPTIONS": [
+      "At the start of your turn, apply #b",
+      " #yNecrosis and 1 #yVulnerable to all enemies. If their Necrosis has reached the toplimit, apply #b",
+      "  #yNecrosis-Burst ."
+    ]
+  },
+  "theresa:DyingBurstPower": {
+    "NAME": "Necrosis-Burst",
+    "DESCRIPTIONS": [
+      "Will continue for #b",
+      " turns: double the the damage-decreasing effect and the toplimit of stacks of #yNecrosis , lose #b",
+      " HP at the end of the turn."
+    ]
+  },
+  "theresa:EndPower": {
+    "NAME": "Ender",
+    "DESCRIPTIONS": [
+      "For each #yParticles you have, decrease the damage you take and the HP you lose by #b",
+      " ."
+    ]
+  },
+  "theresa:DiscordPower": {
+    "NAME": "Ocean of Solaris",
+    "DESCRIPTIONS": [
+      "Prevent the next #b",
+      " damage you take, and heal the source of damage that many instead(Heal random enemy if take no source damage)."
+    ]
+  },
+  "theresa:DisasterPower": {
+    "NAME": "Calamity Heritage",
+    "DESCRIPTIONS": [
+      "Until the end of this turn, decrease the damage you take by #b20% ."
+    ]
+  },
+  "theresa:FlowerOceanPower": {
+    "NAME": "Petal",
+    "DESCRIPTIONS": [
+      "Before the Settlement of your next #b",
+      " cards, the damage your enemies take will increase by #b",
+      " . For each stack this effect lose, increase the damage by 1."
+    ]
+  },
+  "theresa:FixLifePower": {
+    "NAME": "Weave the Livings",
+    "DESCRIPTIONS": [
+      "Reverse the effect of your #yWeak and #yFrail."
+    ]
+  },
+  "theresa:MindPower": {
+    "NAME": "Mind (count)",
+    "DESCRIPTIONS": [
+      "Your #yMind can still be triggered #b",
+      " more times. Will be reset after you play a card."
+    ]
+  },
+  "theresa:DeadDustPower": {
+    "NAME": "Gone-Dust",
+    "DESCRIPTIONS": [
+      "You won't take damage but will get #yNecrosis equals to #b",
+      " times of the damage instead."
+    ]
+  },
+  "theresa:WordlessPower": {
+    "NAME": "Omit",
+    "DESCRIPTIONS": [
+      "Until the end of this turn, transform your cards drawing into gaining #b",
+      " [E] ."
+    ]
+  },
+  "theresa:HeroAndKingPower": {
+    "NAME": "The Hero and the King",
+    "DESCRIPTIONS": [
+      "When you play the card containing \"#gHopeness / #rHatred\" , gain #b",
+      " #gHopeness / #rHatred .",
+      "Hopeness",
+      "Hatred"
+    ]
+  },
+  "theresa:EnlightenmentPower": {
+    "NAME": "Enlightenment?",
+    "DESCRIPTIONS": [
+      "Until end of your turn, randomize the #bturn cost of drawn cards."
+    ]
+  },
+
+  "theresa:NormalSilk": {
+    "NAME": "theresa:Cocoon Cages",
+    "DESCRIPTIONS": [
+      "#yParticles/ #yHand: At the end of your turn, if this card is Attack deal #b",
+      " damage to a random enemy. Otherwise you gain #b",
+      " Block."
+    ]
+  },
+  "theresa:TearSilk": {
+    "NAME": "theresa:Tears",
+    "DESCRIPTIONS": [
+      "Can replace the #yCocoon #yCages . NL #yParticles/ #yHand: At the end of your turn, deal #b",
+      " damage to a random enemy, and you gain #b",
+      " Block."
+    ]
+  },
+  "theresa:MemorySilk": {
+    "NAME": "theresa:Memories",
+    "DESCRIPTIONS": [
+      "#rWon't #rspread NL When played, remove at most 3 #yHatred . Through this way, if you remove no less than: NL 1 stack, gain #b",
+      " Metallicize; NL 2 stacks, gain #b",
+      "  Thorns; NL 3 stacks, this card will be played twice."
+    ]
+  },
+  "theresa:MindSilk": {
+    "NAME": "theresa:Mind",
+    "DESCRIPTIONS": [
+      "Can replace #yCocoon #Cages/Tears or be replaced by them. NL #yParticles : increase the toplimit of the effect of your Hopeness and Hatred by #b",
+      " . NL #yWhen #yspread : gain 1 Hopeness or Hatred(Prioritize gaining the lower level one;  #rCan #rtriggered #r3 #rtimes #rbetween #revery #r2 #rcards #ryou #rplay.).",
+      "#rCan #ronly #rspread #rto #rthe #rcards #rof #rthe #rsame #rtype. NL #yParticles/ #yHand: increase the Hopeness and Hatred by #b"
+    ]
+  },
+  "theresa:WishSilk": {
+    "NAME": "theresa:Dream",
+    "DESCRIPTIONS": [
+      "Can spread only when you have less than #b",
+      " cards that are Weaved with Dream. And can only be Weaved to the cards that can be transformed into Particles. NL #yWhen #ydrawn : Being transformed into Particles that can beyond the toplimit of Particles you can have. NL #yParticles : At the end of your turn, Linger 1 and discard this card."
+    ]
+  },
+  "theresa:PromiseDiePower": {
+    "NAME": "Till Death",
+    "DESCRIPTIONS": [
+      "When entering the stage, shuffle 1 #yRelentless into your draw pile. NL When the HP is less than 50% for the first time, gain 1 #yIntangible , and gain 10 #yStrength at the end of the turn.",
+      "When entering the stage, shuffle 1 #yRelentless+ into your draw pile. NL When the HP is less than 50% for the first time, gain 1 #yIntangible , and gain 10 #yStrength at the end of the turn."
+    ]
+  },
+  "theresa:AssassinPower": {
+    "NAME": "Assassinate",
+    "DESCRIPTIONS": [
+      "Decrease the damage this enemy take by 40%. NL When being attacked #blose this power until the end of this turn, and increase the damage of this enemy's attack can deal to 200%."
+    ]
+  },
+  "theresa:StrongStrikePower": {
+    "NAME": "Heavy Strike",
+    "DESCRIPTIONS": [
+      "Increase the damage your next attcak can deal to #b200% ."
+    ]
+  }
+}

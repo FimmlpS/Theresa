@@ -15,7 +15,7 @@ public class MindOcean extends AbstractTheresaCard {
 
     public MindOcean() {
         super(ID,cardStrings.NAME,2,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.RARE,CardTarget.NONE);
-        baseMagicNumber = magicNumber = 14;
+        baseMagicNumber = magicNumber = 12;
         //CardModifierManager.addModifier(this,new EternalMod());
         this.exhaust = true;
     }

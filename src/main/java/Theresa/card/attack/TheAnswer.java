@@ -1,7 +1,9 @@
 package Theresa.card.attack;
 
 import Theresa.action.AnswerAction;
+import Theresa.action.SpecialAnimationAction;
 import Theresa.card.AbstractTheresaCard;
+import Theresa.helper.AttackHelper;
 import Theresa.patch.OtherEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -23,6 +25,7 @@ public class TheAnswer extends AbstractTheresaCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        addToBot(new SpecialAnimationAction(AttackHelper.ForCharacter.Answer));
         addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,damage,damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
         addToBot(new AnswerAction(abstractMonster,this.upgraded));
     }

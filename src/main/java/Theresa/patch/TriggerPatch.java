@@ -1,5 +1,7 @@
 package Theresa.patch;
 
+import Theresa.helper.AttackHelper;
+import Theresa.relic.LittleCube;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.actions.GameActionManager;
@@ -8,6 +10,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.saveAndContinue.SaveFile;
 
 public class TriggerPatch {
     @SpirePatch(clz = GameActionManager.class,method = "callEndOfTurnActions")
@@ -50,6 +54,21 @@ public class TriggerPatch {
         @SpirePostfixPatch
         public static void Postfix(UseCardAction _inst, AbstractCard card, AbstractCreature target) {
             SilkPatch.playedCard(card);
+            //小方块
+            if(card.isInAutoplay){
+                AbstractRelic littleCube = AbstractDungeon.player.getRelic(LittleCube.ID);
+                if(littleCube != null){
+                    littleCube.onTrigger();
+                }
+            }
+        }
+    }
+
+    @SpirePatch(clz = AbstractDungeon.class,method = "nextRoomTransition",paramtypez = {SaveFile.class})
+    public static class OnNextRoomTransitionPatch {
+        @SpirePostfixPatch
+        public static void Postfix(AbstractDungeon _inst, SaveFile saveFile) {
+            AttackHelper.Instance.clear();
         }
     }
 

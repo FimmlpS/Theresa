@@ -20,6 +20,12 @@ public class DustToPileAction extends AbstractGameAction {
         return this;
     }
 
+    public DustToPileAction setPrev(){
+        this.prev = true;
+        return this;
+    }
+
+    boolean prev = false;
     boolean random = false;
     AbstractCard card;
     CardGroup.CardGroupType gType;
@@ -27,7 +33,10 @@ public class DustToPileAction extends AbstractGameAction {
     @Override
     public void update() {
         if (duration == startDuration) {
-            if(random && !DustPatch.dustManager.dustCards.isEmpty()){
+            if(prev && !DustPatch.dustManager.dustCards.isEmpty()){
+                this.card = DustPatch.dustManager.dustCards.get(0);
+            }
+            else if(random && !DustPatch.dustManager.dustCards.isEmpty()){
                 this.card = DustPatch.dustManager.dustCards.get(AbstractDungeon.cardRandomRng.random(DustPatch.dustManager.dustCards.size() - 1));
             }
             if(!DustPatch.dustManager.containsCard(card)){

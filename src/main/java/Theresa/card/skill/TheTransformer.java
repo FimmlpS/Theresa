@@ -1,7 +1,9 @@
 package Theresa.card.skill;
 
 import Theresa.action.ChooseDustToPileAction;
+import Theresa.action.SpecialAnimationAction;
 import Theresa.card.AbstractTheresaCard;
+import Theresa.helper.AttackHelper;
 import Theresa.patch.OtherEnum;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -21,6 +23,7 @@ public class TheTransformer extends AbstractTheresaCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        addToBot(new SpecialAnimationAction(AttackHelper.ForCharacter.Transformer));
         addToBot(new ChooseDustToPileAction(CardGroup.CardGroupType.HAND,1).setCopy(magicNumber,true,true));
     }
 

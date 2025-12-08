@@ -87,8 +87,8 @@ public class Theresa extends CustomPlayer {
     };
 
     private static final int ENERGY_PER_TURN =3;
-    private static final int STARTING_HP = 45;
-    private static final int MAX_HP = 45;
+    private static final int STARTING_HP = 48;
+    private static final int MAX_HP = 48;
     private static final int STARTING_GOLD = 99;
     private static final int HAND_SIZE = 0;
     private static final int ASCENSION_MAX_HP_LOSS = 4;
@@ -225,7 +225,10 @@ public class Theresa extends CustomPlayer {
 
     @Override
     public List<CutscenePanel> getCutscenePanels() {
-        return super.getCutscenePanels();
+        List<CutscenePanel> panels = new ArrayList();
+        panels.add(new CutscenePanel("TheresaResources/img/charSelect/01.png","HEAL_1"));
+        panels.add(new CutscenePanel("TheresaResources/img/charSelect/02.png","HEAL_3"));
+        return panels;
     }
 
     @Override

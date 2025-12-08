@@ -13,6 +13,7 @@ public abstract class AbstractTheresaCard extends CustomCard {
 
     public boolean exhaustAfterBlockDamage = false;
     public boolean dontExhaustIfExhaust = false;
+    public boolean shouldLocked = false;
 
     public boolean shouldExhaust(){
         return this.exhaust;

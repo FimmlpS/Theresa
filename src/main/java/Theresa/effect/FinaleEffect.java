@@ -1,5 +1,6 @@
 package Theresa.effect;
 
+import Theresa.modcore.ModConfig;
 import basemod.ReflectionHacks;
 import basemod.patches.com.megacrit.cardcrawl.core.CardCrawlGame.ApplyScreenPostProcessor;
 import com.badlogic.gdx.Gdx;
@@ -24,6 +25,11 @@ public class FinaleEffect extends AbstractGameEffect {
 
     boolean isTwist;
 
+    public static void clear(){
+        finaleShader = null;
+        twistShader = null;
+    }
+
     public static boolean compiled(){
         return finaleShader != null && twistShader != null;
     }
@@ -36,18 +42,20 @@ public class FinaleEffect extends AbstractGameEffect {
             String vertexShader = Gdx.files.internal("TheresaResources/shader/greyFilter/greyFilter.vs").readString();
             String fragShader = Gdx.files.internal("TheresaResources/shader/greyFilter/greyFilter.fs").readString();
             finaleShader = new ShaderProgram(vertexShader, fragShader);
-            if (!finaleShader.isCompiled()) {
+            if (!finaleShader.isCompiled() || !ModConfig.enableShader) {
                 //throw new RuntimeException(finaleShader.getLog());
-
+                finaleShader = null;
+                this.isDone = true;
             }
         }
         if(twistShader == null) {
             String vertexShader = Gdx.files.internal("TheresaResources/shader/twist/twist.vs").readString();
             String fragShader = Gdx.files.internal("TheresaResources/shader/twist/twist.fs").readString();
             twistShader = new ShaderProgram(vertexShader, fragShader);
-            if (!twistShader.isCompiled()) {
+            if (!twistShader.isCompiled() || !ModConfig.enableShader) {
                 //throw new RuntimeException(twistShader.getLog());
-
+                twistShader = null;
+                this.isDone = true;
             }
         }
     }

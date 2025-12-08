@@ -13,7 +13,7 @@ public class Echoism extends AbstractTheresaCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public Echoism() {
-        super(ID,cardStrings.NAME,3,cardStrings.DESCRIPTION,CardType.POWER,CardRarity.UNCOMMON,CardTarget.SELF);
+        super(ID,cardStrings.NAME,2,cardStrings.DESCRIPTION,CardType.POWER,CardRarity.UNCOMMON,CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 
@@ -26,7 +26,8 @@ public class Echoism extends AbstractTheresaCard {
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
-            upgradeBaseCost(2);
+            upgradeBaseCost(3);
+            upgradeMagicNumber(1);
         }
     }
 }

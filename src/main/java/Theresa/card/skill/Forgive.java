@@ -17,11 +17,12 @@ public class Forgive extends AbstractTheresaCard {
         baseMagicNumber = magicNumber = 2;
         exhaust = true;
         selfRetain = true;
+        shouldLocked = true;
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        for(int i = 0; i < this.magicNumber; i++) {
+        for(int i = 0; i < this.baseMagicNumber; i++) {
             addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new HopePower(abstractPlayer,1),1));
         }
     }

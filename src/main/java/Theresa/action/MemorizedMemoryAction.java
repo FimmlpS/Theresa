@@ -12,7 +12,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import java.util.ArrayList;
 
 public class MemorizedMemoryAction extends AbstractGameAction {
-    public MemorizedMemoryAction() {}
+    public MemorizedMemoryAction(boolean mustCanGo) {
+        this.mustCanGo = mustCanGo;
+    }
+
+    boolean mustCanGo = false;
 
     @Override
     public void update() {
@@ -22,15 +26,15 @@ public class MemorizedMemoryAction extends AbstractGameAction {
         boolean canGo = false;
         for(AbstractCard c : cards) {
             AbstractSilk aS = SilkPatch.SilkCardField.silk.get(c);
-            if(aS == null || silk.canReplace(aS)) {
+            if(aS == null) {
                 canGo = true;
                 break;
             }
         }
-        if(canGo) {
-            addToTop(new MemorizedMemoryAction());
-            addToTop(new RandomSilkAction(silk.makeCopy(),false,true));
-            addToTop(new RandomSilkAction(silk.makeCopy(),false,true));
+        if(mustCanGo || canGo) {
+            addToTop(new MemorizedMemoryAction(false));
+            addToTop(new RandomSilkAction(silk.makeCopy(),false,false));
+            //addToTop(new RandomSilkAction(silk.makeCopy(),false,true));
             addToTop(new DrawCardAction(1));
         }
 

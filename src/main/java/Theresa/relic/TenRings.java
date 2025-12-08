@@ -2,7 +2,7 @@ package Theresa.relic;
 
 import Theresa.action.IncreaseMaxDustAction;
 import Theresa.helper.StringHelper;
-import Theresa.patch.DustPatch;
+import Theresa.interfaces.LockedIt;
 import Theresa.power.buff.EchoismPower;
 import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -19,21 +19,34 @@ public class TenRings extends CustomRelic {
     }
 
     @Override
-    public void atBattleStartPreDraw() {
+    public void atPreBattle() {
+        this.counter = 0;
         this.flash();
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         addToBot(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new EchoismPower(AbstractDungeon.player,1),1));
     }
 
     @Override
-    public void onPlayerEndTurn() {
-        if(DustPatch.dustManager.dustUpLimit>2){
+    public void atTurnStart() {
+        this.counter++;
+        if(this.counter==2){
+            this.counter = 0;
             this.flash();
+            this.stopPulse();
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            addToBot(new IncreaseMaxDustAction(-2));
-            addToBot(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new EchoismPower(AbstractDungeon.player,1),1));
+            addToBot(new IncreaseMaxDustAction(1));
+        }
+        else if(this.counter==1){
+            this.beginLongPulse();
         }
     }
+
+    @Override
+    public void onVictory() {
+        this.stopPulse();
+        this.counter = -1;
+    }
+
 
     @Override
     public String getUpdatedDescription() {

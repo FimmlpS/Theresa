@@ -10,7 +10,8 @@
       "theresa:特蕾西娅的希望",
       "theresa:转化",
       "theresa:忘却",
-      "theresa:存续"
+      "theresa:存续",
+      "theresa:结缔"
     ]
   },
   "theresa:Operation": {
@@ -25,7 +26,8 @@
       "选择至多",
       "张以编织茧笼",
       "丢弃，若可转化则转化为微尘",
-      "张牌放入"
+      "张牌放入",
+      "张以编织意志"
     ]
   },
   "theresa:TypeSelect": {
@@ -35,6 +37,26 @@
     "EXTRA_TEXT": [
       "简单难度",
       "正常难度"
+    ]
+  },
+  "theresa:TheBabel": {
+    "TEXT": [
+      "假想的敌人不会击败你…… \n ……你只是依然无法走出过去",
+      "未登场敌人数量："
+    ],
+    "EXTRA_TEXT": [
+      "■■中的「罗德岛」"
+    ]
+  },
+  "theresa:Monster": {
+    "TEXT": [
+      "13名裹骇死士"
+    ]
+  },
+  "theresa:Config": {
+    "TEXT": [
+      "是否启用着色器效果（手机版请关闭）？",
+      "Mod设置"
     ]
   }
 }

@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -25,7 +26,7 @@ public class Branch extends AbstractTheresaCard {
 
     public Branch() {
         super(ID,cardStrings.NAME,2,cardStrings.DESCRIPTION,CardType.ATTACK,CardRarity.UNCOMMON,CardTarget.ENEMY);
-        baseDamage = damage = 15;
+        baseDamage = damage = 14;
     }
 
     @Override
@@ -42,9 +43,25 @@ public class Branch extends AbstractTheresaCard {
 //            }
 //            addToBot(new ChooseOneAction(selections));
 //        }
-        if(!dontTriggerOnUseCard){
+        if(canDust()){
             addToBot(new DustAction(1));
         }
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        this.glowColor = Settings.BLUE_TEXT_COLOR.cpy();
+        if(canDust()){
+            this.glowColor = Settings.GOLD_COLOR.cpy();
+        }
+    }
+
+    private boolean canDust(){
+        for(AbstractCard c:DustPatch.dustManager.dustCards){
+            if(!(c instanceof Branch))
+                return true;
+        }
+        return false;
     }
 
     @Override
@@ -71,7 +88,7 @@ public class Branch extends AbstractTheresaCard {
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
-            upgradeDamage(5);
+            upgradeDamage(4);
         }
     }
 }

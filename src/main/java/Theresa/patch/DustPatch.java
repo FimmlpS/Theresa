@@ -9,8 +9,10 @@ import Theresa.character.Theresa;
 import Theresa.helper.TheresaHelper;
 import Theresa.modcore.TheresaMod;
 import Theresa.power.AbstractTheresaPower;
+import Theresa.power.buff.EchoismPower;
 import Theresa.power.buff.EndPower;
 import Theresa.power.buff.IntoHistoryPower;
+import Theresa.power.buff.PastDustPower;
 import Theresa.relic.TenRings;
 import Theresa.silk.WishSilk;
 import basemod.ReflectionHacks;
@@ -58,6 +60,7 @@ public class DustPatch {
     public static void drawPileToDust(){
         AbstractPlayer p = AbstractDungeon.player;
         AbstractCard c = p.drawPile.getTopCard();
+        DrawCardAction.drawnCards.add(c);
         c.current_x = CardGroup.DRAW_PILE_X;
         c.current_y = CardGroup.DRAW_PILE_Y;
         c.setAngle(0.0F, true);
@@ -246,7 +249,7 @@ public class DustPatch {
     //抵挡伤害
     @SpirePatch(clz = AbstractPlayer.class, method = "damage")
     public static class PlayerDamagePatch{
-        @SpireInsertPatch(rloc = 90,localvars = {"damageAmount"})
+        @SpireInsertPatch(rloc = 61,localvars = {"damageAmount"})
         public static void Insert(AbstractPlayer _inst, DamageInfo info, @ByRef int[] damageAmount){
             damageAmount[0] = dustManager.blockDamage(damageAmount[0]);
         }
@@ -302,6 +305,13 @@ public class DustPatch {
 
     public static void atTurnStartPostDraw(){
         AbstractDungeon.actionManager.addToBottom(new DustAction(1));
+        AbstractPower p = AbstractDungeon.player.getPower(EchoismPower.POWER_ID);
+        if(p!=null && p.amount>0){
+            p.onSpecificTrigger();
+            for(int i =0;i<p.amount;i++){
+                AbstractDungeon.actionManager.addToBottom(new DustAction(1));
+            }
+        }
     }
 
     public static class DustManager{
@@ -310,9 +320,11 @@ public class DustPatch {
 
         public int dustUpLimit = 0;
         public ArrayList<AbstractCard> dustCards = new ArrayList<>();
+        public ArrayList<AbstractCard> lingeredThisTurn = new ArrayList<>();
 
         public void preBattle(){
             dustCards.clear();
+            lingeredThisTurn.clear();
             if(AbstractDungeon.player instanceof Theresa){
                 dustUpLimit = 3;
 //                if(AbstractDungeon.player.hasRelic(TenRings.ID))
@@ -335,6 +347,7 @@ public class DustPatch {
                     ((AbstractTheresaCard) c).atTurnEndIfDust();
                 }
             }
+            lingeredThisTurn.clear();
         }
 
         public int blockDamage(int damageAmount){
@@ -363,7 +376,7 @@ public class DustPatch {
             }
             for(AbstractCard c : cardsToExhaust){
                 c.flash();
-                dustCards.remove(c);
+                removeCard(c);
                 AbstractDungeon.player.exhaustPile.moveToExhaustPile(c);
             }
             return damageAmount;
@@ -394,11 +407,8 @@ public class DustPatch {
                         exhaustSource = false;
                 }
 
-                //循历史而去，(已经废除：会阻止消耗牌的消耗)
-                AbstractPower ih = AbstractDungeon.player.getPower(IntoHistoryPower.POWER_ID);
-                if(!AbstractDungeon.actionManager.turnHasEnded && ih instanceof IntoHistoryPower){
-                    ((IntoHistoryPower) ih).triggerCard(lingeredCard);
-                    //exhaustSource = false;
+                if(!lingeredThisTurn.contains(lingeredCard)){
+                    lingeredThisTurn.add(lingeredCard);
                 }
 
                 AbstractCard c = lingeredCard.makeSameInstanceOf();
@@ -410,8 +420,16 @@ public class DustPatch {
                     AbstractDungeon.actionManager.addToTop(new PlayCardAction(c, null,true));
                 }
                 if(exhaustIt || exhaustSource || lingeredCard.type == AbstractCard.CardType.POWER){
-                    dustCards.remove(lingeredCard);
+                    removeCard(lingeredCard);
                     AbstractDungeon.player.exhaustPile.moveToExhaustPile(lingeredCard);
+                    AbstractPower ih = AbstractDungeon.player.getPower(IntoHistoryPower.POWER_ID);
+                    if(ih != null)
+                        ih.onSpecificTrigger();
+                }
+
+                AbstractPower pd = AbstractDungeon.player.getPower(PastDustPower.POWER_ID);
+                if(pd instanceof PastDustPower){
+                    ((PastDustPower) pd).triggerOnBecomeDust(lingeredCard);
                 }
             }
         }

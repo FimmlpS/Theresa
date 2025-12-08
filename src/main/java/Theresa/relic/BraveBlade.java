@@ -28,7 +28,11 @@ public class BraveBlade extends CustomRelic {
     @Override
     public float atDamageModify(float damage, AbstractCard c) {
         if(SilkPatch.SilkCardField.silk.get(c) != null){
-            return damage+3F;
+            int times = 1;
+            int multi = SilkPatch.SilkCardField.silkTriggerTimes.get(c);
+            if(multi>1)
+                times = multi;
+            return damage * (1F + (float) times/3F);
         }
         return super.atDamageModify(damage, c);
     }

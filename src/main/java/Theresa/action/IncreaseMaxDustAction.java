@@ -1,8 +1,11 @@
 package Theresa.action;
 
 import Theresa.patch.DustPatch;
+import Theresa.power.buff.EchoismPower;
+import Theresa.relic.TenRings;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class IncreaseMaxDustAction extends AbstractGameAction {
@@ -21,6 +24,9 @@ public class IncreaseMaxDustAction extends AbstractGameAction {
             DustPatch.dustManager.dustUpLimit = 0;
             addToTop(new TalkAction(true,"...",1F,2F));
         }
+//        if(AbstractDungeon.player.hasRelic(TenRings.ID) && DustPatch.dustManager.dustUpLimit == 10){
+//            AbstractDungeon.player.getRelic(TenRings.ID).onTrigger();
+//        }
         this.isDone = true;
     }
 }

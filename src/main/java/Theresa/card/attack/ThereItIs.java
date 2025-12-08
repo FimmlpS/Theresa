@@ -24,8 +24,8 @@ public class ThereItIs extends AbstractTheresaCard {
     }
 
     public ThereItIs() {
-        super(ID,cardStrings.NAME,1,cardStrings.DESCRIPTION,CardType.ATTACK,CardRarity.UNCOMMON,CardTarget.ENEMY);
-        baseDamage = damage = 7;
+        super(ID,cardStrings.NAME,2,cardStrings.DESCRIPTION,CardType.ATTACK,CardRarity.UNCOMMON,CardTarget.ENEMY);
+        baseDamage = damage = 8;
         baseMagicNumber = magicNumber = 2;
     }
 
@@ -33,7 +33,7 @@ public class ThereItIs extends AbstractTheresaCard {
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new TheresaAttackAction(true));
         addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,damage,damageTypeForTurn), skillEffect));
-        addToBot(new ResetItAction(this));
+        //addToBot(new ResetItAction(this));
     }
 
     @Override

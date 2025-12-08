@@ -3,6 +3,7 @@ package Theresa.helper;
 import Theresa.card.attack.*;
 import Theresa.card.power.*;
 import Theresa.card.skill.*;
+import Theresa.card.status.Decide;
 import Theresa.card.status.Stop;
 import Theresa.card.status.TheGift;
 import Theresa.relic.*;
@@ -33,6 +34,7 @@ public class RegisterHelper {
         list.add(new Oscillation());
         list.add(new Candle());
         //list.add(new DeadOne());
+        list.add(new KingKitty());
         list.add(new TowardEndfield());
         list.add(new FromNight());
         list.add(new Iterate());
@@ -51,11 +53,14 @@ public class RegisterHelper {
         list.add(new EndDust());
         list.add(new FallFromMemory());
         list.add(new UnseenFuture());
+        list.add(new Silk());
+        list.add(new FlowerOcean());
+        list.add(new FallMoon());
 
         //UNCOMMON
         list.add(new ToughHistory());
         list.add(new TimeToDie());
-        list.add(new Silk());
+        list.add(new SilkPoem());
         list.add(new Echoism());
         list.add(new PastDust());
         list.add(new YoreLinger());
@@ -96,6 +101,11 @@ public class RegisterHelper {
         list.add(new NightBeforeWar());
         list.add(new CivilightEterna());
         list.add(new SadDust());
+        list.add(new Cure());
+        list.add(new FixLife());
+        list.add(new SadTime());
+        list.add(new StoryTeller());
+        list.add(new Enlightenment());
 
         //RARE
         list.add(new GuiltyWillEnd());
@@ -111,15 +121,19 @@ public class RegisterHelper {
         list.add(new ManyLight());
         list.add(new OnlyForYou());
         list.add(new TheAnswer());
+        list.add(new HeroAndKing());
         list.add(new MemorizedMemory());
         list.add(new DyingRose());
         list.add(new Rare());
         list.add(new MindOcean());
+        list.add(new MourningInMourning());
+        list.add(new FinalCountdown());
 
         //OTHER
         list.add(new TheGift());
         list.add(new Originium());
         list.add(new Stop());
+        list.add(new Decide());
 
         for(AbstractCard c : list){
             if(c.color == AbstractCard.CardColor.GREEN){
@@ -145,6 +159,17 @@ public class RegisterHelper {
             list.add(new BraveBlade());
             list.add(new TenRings());
             list.add(new KnownRelic());
+            list.add(new LittleCube());
+            list.add(new LiteratureBegins());
+            list.add(new BabelWord());
+            list.add(new EyeSpy());
+            list.add(new NamelessTotem());
+            list.add(new WhiteCrown());
+            list.add(new UntoldFragments());
+            list.add(new GoDudeNoWord());
+            list.add(new QuiZaTueStaWord());
+            list.add(new BaMissUsWord());
+            list.add(new IreShyWord());
 
             if(bossRelic.isEmpty()){
                 for(AbstractRelic r : list){

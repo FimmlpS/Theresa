@@ -1,0 +1,8 @@
+{
+  "theresa:Disaster": {
+    "NAME": "Calamity",
+    "DESCRIPTION": [
+      "The damage you take will be increased by 20%. After losing HP or taking damage, exit the Calamity , and then decrease the damage you take by 20% in this turn."
+    ]
+  }
+}

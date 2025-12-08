@@ -22,7 +22,7 @@ public class AStory extends AbstractTheresaCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new GainBlockAction(abstractPlayer, block));
-        addToBot(new CivilightAction(CardGroup.CardGroupType.HAND,1).setType(false,true,false,false,false).setCopy(1,true,false));
+        addToBot(new CivilightAction(CardGroup.CardGroupType.HAND,1).setType(false,true,false,false,false).setCopy(1,true,false).setCostDiff(-1));
     }
 
     @Override

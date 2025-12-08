@@ -26,7 +26,7 @@ public class DyingRose extends AbstractTheresaCard {
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
-            upgradeMagicNumber(3);
+            upgradeMagicNumber(2);
         }
     }
 }

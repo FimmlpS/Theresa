@@ -15,8 +15,9 @@ public class InsideCrystal extends AbstractTheresaCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public InsideCrystal() {
-        super(ID,cardStrings.NAME,5,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.UNCOMMON,CardTarget.NONE);
+        super(ID,cardStrings.NAME,4,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.UNCOMMON,CardTarget.NONE);
         this.cardsToPreview = new Originium();
+        shouldLocked = true;
     }
 
     @Override
@@ -34,7 +35,7 @@ public class InsideCrystal extends AbstractTheresaCard {
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
-            upgradeBaseCost(4);
+            upgradeBaseCost(3);
         }
     }
 }

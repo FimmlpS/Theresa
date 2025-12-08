@@ -1,0 +1,15 @@
+{
+  "theresa:Deadman": {
+    "NAME": "Deathveil Assassin",
+    "MOVES": [],
+    "DIALOG": [
+      "Theresa. Your Highness...",
+      "We want to do something for the Sarkaz before we die. And so now we stand before you...",
+      "We have come to kill you. The King we once swore an oath of loyalty to.",
+      "We know your strength better than anyone. So, allow us damned traitors to escort you to hell."
+    ]
+  },
+  "theresa:Empty": {
+    "NAME": "[empty]"
+  }
+}

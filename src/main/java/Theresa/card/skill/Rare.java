@@ -19,6 +19,7 @@ public class Rare extends AbstractTheresaCard {
         super(ID,cardStrings.NAME,3,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.RARE,CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
         tags.add(OtherEnum.Theresa_Darkness);
+        shouldLocked = true;
     }
 
     @Override

@@ -49,7 +49,7 @@ public class LostHPAction extends AbstractGameAction {
 
     @SpirePatch(clz = AbstractPlayer.class,method = "damage")
     public static class LostHPActionPatch {
-        @SpireInsertPatch(rloc = 125)
+        @SpireInsertPatch(rloc = 112)
         public static void Insert(AbstractPlayer _inst, DamageInfo info){
             if(UNABLE_DIE && _inst.currentHealth < 1) {
                 _inst.currentHealth = 1;

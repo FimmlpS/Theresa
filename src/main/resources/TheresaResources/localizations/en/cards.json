@@ -1,0 +1,476 @@
+{
+  "theresa:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage"
+  },
+  "theresa:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block ."
+  },
+  "theresa:DustStrike": {
+    "NAME": "Strike·Dust",
+    "DESCRIPTION": " Innate . NL Deal !D! damage. NL  theresa:Linger : put this card into your hand."
+  },
+  "theresa:DustDefend": {
+    "NAME": "Defend·Dust",
+    "DESCRIPTION": " Innate . NL Gain !B! Block . NL  theresa:Linger : put this card into your hand."
+  },
+  "theresa:Spot": {
+    "NAME": "Embellish",
+    "DESCRIPTION": "theresa:Dim . NL Deal !D! damage. NL Put a theresa:Particle into your hand ."
+  },
+  "theresa:Wish": {
+    "NAME": "Vision",
+    "DESCRIPTION": "theresa:Dim . NL Gain !B! Block . NL If the theresa:Particles you have are less than the toplimit, draw !M! cards."
+  },
+  "theresa:ADust": {
+    "NAME": "Dust",
+    "DESCRIPTION": "Draw !M! cards. NL Gain [E] .",
+    "UPGRADE_DESCRIPTION": " Innate . NL Draw !M! cards. NL Gain [E] ."
+  },
+
+  "theresa:Oscillation": {
+    "NAME": "Oscillate",
+    "DESCRIPTION": "Deal !D! damage. NL *When *being *transformed *into *or *exiting *Particles :deal !M! damage to all enemies."
+  },
+  "theresa:Candle": {
+    "NAME": "Candlelight",
+    "DESCRIPTION": "Exhaust a theresa:Particle . NL theresa:Linger !M! times. NL Exhaust ."
+  },
+  "theresa:KingKitty": {
+    "NAME": "The Kitty",
+    "DESCRIPTION": "Deal !D! damage. NL theresa:Weave a random theresa:Particle with *Cocoon *Cages ."
+  },
+  "theresa:DeadOne": {
+    "NAME": "逝尘",
+    "DESCRIPTION": "Gain !B! Block . NL theresa:Particle :使你受到的下次伤害降低 !M! 点并 Exhaust ."
+  },
+  "theresa:TowardEndfield": {
+    "NAME": "Endfield",
+    "DESCRIPTION": "theresa:Dim . NL Put the former !M! theresa:Particles into your hand , discard !M! cards. NL If the cards you discard can be transform into theresa:Particle , transform them."
+  },
+  "theresa:FromNight": {
+    "NAME": "Darknights Memoir",
+    "DESCRIPTION": "Gain theresa:Hatred .",
+    "UPGRADE_DESCRIPTION": "Gain 1 theresa:Hatred . NL If the *Memory replaced 3 Hatred, gain 1 theresa:Hopeness ."
+  },
+  "theresa:Iterate": {
+    "NAME": "Alternation",
+    "DESCRIPTION": "Discard all your theresa:Particles , and draw that many+ !M! cards."
+  },
+  "theresa:InFire": {
+    "NAME": "Kazdel in War",
+    "DESCRIPTION": "theresa:Dim . NL Apply 1 theresa:Hatred . NL Gain !M! theresa:Hatred .",
+    "UPGRADE_DESCRIPTION": "theresa:Dim . NL Apply 2 theresa:Hatred . NL Gain !M! theresa:Hatred ."
+  },
+  "theresa:WhereIsHome": {
+    "NAME": "As Refugee",
+    "DESCRIPTION": "theresa:Dim . NL Deal !D! damage. NL Apply !M! theresa:Hatred to all entities."
+  },
+  "theresa:LittleTailor": {
+    "NAME": "Little Tailor",
+    "DESCRIPTION": "Gain !B! Block . NL theresa:Weave a random card in your hand with *Cocoon *Cages ."
+  },
+  "theresa:Babel": {
+    "NAME": "Babel",
+    "DESCRIPTION": "Gain !B! Block . NL Apply !M! theresa:Hopeness to all entities."
+  },
+  "theresa:WeaveSpread": {
+    "NAME": "Weave Spreading",
+    "DESCRIPTION": "Retain . NL Deal !D! damage !M! times. NL Spread the theresa:Thread of the cards in discard and draw pile to their adjacent cards."
+  },
+  "theresa:EmotionSame": {
+    "NAME": "Emotion Resonance",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Transmit 1 theresa:Hatred from the enemies to you. NL Gain 1 theresa:Hopeness for each transmitting failaure ."
+  },
+  "theresa:SarkazSee": {
+    "NAME": "Sarkaz Witness",
+    "DESCRIPTION": "Deal !D! damage. NL theresa:Reproduce 1 Attack. NL Exhaust ."
+  },
+  "theresa:AStory": {
+    "NAME": "Sarkaz Illustration",
+    "DESCRIPTION": "Gain !B! Block . NL theresa:Reproduce 1 Skill. NL Exhaust ."
+  },
+  "theresa:Hardship": {
+    "NAME": "Anguish Hangs O'er",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL For enemies whose theresa:Necrosis has reach the toplimit, deal !M! damage instead."
+  },
+  "theresa:SkyDisaster": {
+    "NAME": "Catastrophe",
+    "DESCRIPTION": "Deal !D! damage. NL Apply that many  theresa:Necrosis ."
+  },
+  "theresa:WrongInteraction": {
+    "NAME": "Interlace | React",
+    "DESCRIPTION": "Deal !D! damage. NL *When *drawn *into *your *hand: exchange this card with a theresa:Particle with lower cost, and cost 1 less [E] ."
+  },
+  "theresa:FlowerSilk": {
+    "NAME": "Flowery Cocoon",
+    "DESCRIPTION": "Draw !M! cards with theresa:Thread . NL *When *being *transformed *into *or *exiting *Particles : theresa:Weave a random card in your hand with *Cocoon *Cages ."
+  },
+  "theresa:EndDust": {
+    "NAME": "Ender Dust",
+    "DESCRIPTION": "Gain 1 theresa:Ender . NL *When *drawn *into *your *hand : discard this and gain !M! Block . NL Exhaust ."
+  },
+ "theresa:FallFromMemory": {
+    "NAME": "Fallen From Memory",
+    "DESCRIPTION": "theresa:Linger 1. NL Cost 1 more [E] . NL *Linger : decrease the cost of this card by !M! and put it to your hand."
+  },
+  "theresa:UnseenFuture": {
+    "NAME": "The Future Elusive",
+    "DESCRIPTION": "Deal !D! damage. NL Add Exhaust to all starter cards in theresa:Particles pile. NL theresa:Linger 1 for each starter cards in theresa:Particles pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply Exhaust to all starter cards in theresa:Particles pile. NL theresa:Linger 1 for each Exhaust card in theresa:Particles pile."
+  },
+  "theresa:Silk": {
+    "NAME": "Silk",
+    "DESCRIPTION": "Gain !B! Block . NL Gain [E] ."
+  },
+  "theresa:FlowerOcean": {
+    "NAME": "Sea of Flower",
+    "DESCRIPTION": " Before the Settlement of your next 3 cards, the damage your enemies take will increase by 1/2/3 .",
+    "UPGRADE_DESCRIPTION": "Retain . NL Before the Settlement of your next 3 cards, the damage your enemies take will increase by 1/2/3."
+  },
+  "theresa:FallMoon": {
+    "NAME": "Lower The Curtain",
+    "DESCRIPTION": "Gain !B! Block. NL Add a *Termination to your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add a *Termination to your hand. NL Draw 1 card."
+  },
+
+  "theresa:ToughHistory": {
+    "NAME": "Suffering",
+    "DESCRIPTION": "Gain 1 theresa:Hopeness and theresa:Hatred for X times. NL Exhaust .",
+    "UPGRADE_DESCRIPTION": "Gain 1 theresa:Hopeness and theresa:Hatred for X times. NL And then, theresa:Transform for X times. NL Exhaust ."
+  },
+  "theresa:TimeToDie": {
+    "NAME": "Decay Countdown",
+    "DESCRIPTION": "For each card being Exhausted or remove , apply !M! theresa:Necrosis to the enemy with the highest HP."
+  },
+  "theresa:SilkPoem": {
+    "NAME": "Silk Poetry",
+    "DESCRIPTION": "Draw !M! cards. NL Apply theresa:Connective to the card you draw, and trigger the theresa:Thread of the card you draw."
+  },
+  "theresa:Echoism": {
+    "NAME": "Echoism",
+    "DESCRIPTION": "At the start of your turn, theresa:Linger additional !M! times."
+  },
+  "theresa:PastDust": {
+    "NAME": "Dust of the Past",
+    "DESCRIPTION": "For each card that being transformed into theresa:Particle or being theresa:Lingered , you gain !M! Block ."
+  },
+  "theresa:YoreLinger": {
+    "NAME": "The Past Lingering",
+    "DESCRIPTION": "At the end of your turn, apply !M! theresa:Forget to all theresa:Particles ."
+  },
+  "theresa:DeathOfSarkaz": {
+    "NAME": "Tragedy of Sarkaz",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Increase the damage by !M! for each stack of difference between theresa:Hatred and *Hopeness."
+  },
+  "theresa:LightlessShadow": {
+    "NAME": "Shadow Fallen",
+    "DESCRIPTION": "Discard all your theresa:Particles . NL Deal !D! damage and apply !M! theresa:Necrosis for each theresa:Particle you discard."
+  },
+  "theresa:Forgive": {
+    "NAME": "Forgive",
+    "DESCRIPTION": "Retain . NL Gain 1 theresa:Hopeness !M! times. NL For each time you lose HP in this combat, increase the times this card can gain by 1. NL Exhaust ."
+  },
+  "theresa:ThereItIs": {
+    "NAME": "There ■ is",
+    "DESCRIPTION": "Deal !D! damage. NL *When *this *card *is * in *your *hand , increase the damage by !M! for each time the place of this card change."
+  },
+  "theresa:ImperialCourts": {
+    "NAME": "Royal Court's Call",
+    "DESCRIPTION": "theresa:Lose 3 HP. NL Choose 1 *Pact *card to add it into your hand. NL Exhaust .",
+    "UPGRADE_DESCRIPTION": "theresa:Lose 3 HP. NL Choose 1 Upgraded *Pact *card into your hand. NL Exhaust ."
+  },
+  "theresa:WeaveTomorrow": {
+    "NAME": "Weave For Tomorrow",
+    "DESCRIPTION": " theresa:Weave all the theresa:Particles that have no theresa:Thread with *Cocoon *Cages . NL Increase the stats of your theresa:Thread by !M!."
+  },
+  "theresa:HoldDust": {
+    "NAME": "Keep the Dust",
+    "DESCRIPTION": "Draw !M! cards. NL Transform a card in your hand into theresa:Particle that can beyond the toplimit."
+  },
+  "theresa:TheAmiya": {
+    "NAME": "Promise: Amiya",
+    "DESCRIPTION": " Innate , Exhaust . NL Gain 1 theresa:Blur . NL *When *being *transformed *into *or *exiting *Particles : NL Gain !M! theresa:Hopeness .",
+    "FLAVOR": "“Forgive me……”"
+  },
+  "theresa:TheDoctor": {
+    "NAME": "Promise: Doctor",
+    "DESCRIPTION": " Innate . NL Draw 2 cards. NL *When *being *transformed *into *or *exiting *Particles : NL Draw !M! cards.",
+    "EXTENDED_DESCRIPTION": [
+      "Promise:"
+    ],
+    "FLAVOR": "“Find yourself.”"
+  },
+  "theresa:TheCat": {
+    "NAME": "Promise: Kalsit",
+    "DESCRIPTION": " Innate . NL Exchange your theresa:Particles with that many cards in your hand. NL *When *being *transformed *into *or *exiting *Particles : NL Gain [E] .",
+    "FLAVOR": "“Have you found your answer?”"
+  },
+  "theresa:TheSwordsman": {
+    "NAME": "Pledge: Theresis",
+    "DESCRIPTION": "Deal !D! damage. NL If your theresa:Particles are less than the toplimit, add a copy of this card into your theresa:Particles pile. NL The theresa:Thread of this card will trigger !M! times."
+  },
+  "theresa:TheStrategist": {
+    "NAME": "Pledge: Manfred",
+    "DESCRIPTION": "Trigger the theresa:Thread effect of all your theresa:Particles. NL Increase the stats of your theresa:Thread by !M! during TRIGGER."
+  },
+  "theresa:TheKiller": {
+    "NAME": "Pledge: Ascalon",
+    "DESCRIPTION": "Apply *Slow to all enemies . NL At the end of your turn, apply theresa:Necrosis equals to !M! times of their *Slow to them. NL Exhaust .",
+    "UPGRADE_DESCRIPTION": "Apply *Slow to all enemies . NL At the end of your turn, apply theresa:Necrosis equals to !M! times of their *Slow to them."
+  },
+  "theresa:TheDale": {
+    "NAME": "Pledge: Wiš'adel",
+    "DESCRIPTION": "Lose either theresa:Hatred or theresa:Hopeness till they have the same stacks, and deal !D! damage to all enemies for that many time. NL (At most 6 times)"
+  },
+  "theresa:InsideCrystal": {
+    "NAME": "Inside the Crystal",
+    "DESCRIPTION": "Add an *\"origin\" into your theresa:Particles pile which can exceed the toplimit. NL *When *transformed *into *Particle , put this card into your hand and it will cost 1 less [E] ."
+  },
+  "theresa:NarrativeSong": {
+    "NAME": "Narrative Song",
+    "DESCRIPTION": "Shuffle your discard pile into your draw pile. NL Spread the theresa:Thread of the cards in your draw pile to their adjacent cards."
+  },
+  "theresa:ConnectedPain": {
+    "NAME": "Pain Connection",
+    "DESCRIPTION": "Choose alternative of !M! cards in your draw pile that have no theresa:Thread to theresa:Weave them with *Cocoon *Cages . While theresa:Weave others with *Mind . NL Exhaust ."
+  },
+  "theresa:Terminate": {
+    "NAME": "Eliminate",
+    "DESCRIPTION": "Deal !D! damage !M! 次. NL Increase the damage to X times of the number of cards that have theresa:Thread in your hand and theresa:Particles pile."
+  },
+  "theresa:IdealReflection": {
+    "NAME": "Reflection of Ideals",
+    "DESCRIPTION": "theresa:Dim . NL theresa:Linger X times.",
+    "UPGRADE_DESCRIPTION": "theresa:Dim . NL Choose at most X theresa:Particles to put them to your hand. NL theresa:Linger X times."
+  },
+  "theresa:Starter": {
+    "NAME": "Starter",
+    "DESCRIPTION": "theresa:Dim ,  Innate . NL Apply !M! theresa:Necrosis . NL Apply 1 Weak . NL Exhaust .",
+    "UPGRADE_DESCRIPTION": "theresa:Dim ,  Innate . NL Apply !M! theresa:Necrosis . NL Apply 2 Weak . NL Exhaust ."
+  },
+  "theresa:PastCallFuture": {
+    "NAME": "Cry from Past to Future",
+    "DESCRIPTION": "theresa:Dim. NL Discard the cards in your hand that have no theresa:Thread , and then draw that many + !M! cards. NL If you discard no card, then Exhaust this card and increase the stats of your theresa:Thread by 1."
+  },
+  "theresa:IntoHistory": {
+    "NAME": "Follow the History",
+    "DESCRIPTION": "*This *Power *cannot *stack . NL For each time you theresa:Linger a card that have Exhaust keyword, add a random card that have Exhaust keyword into your theresa:Particle pile."
+  },
+  "theresa:MindOscillation": {
+    "NAME": "Mind Oscillation",
+    "DESCRIPTION": "Retain . NL Deal !D! damage. NL theresa:Weave the last card you have played and the card that have the same name of it with *Mind ."
+  },
+  "theresa:DeadBreath": {
+    "NAME": "Breath of Revenant",
+    "DESCRIPTION": "Gain !B! Block . NL If the the last card you played is not Skill, Exhaust self and trigger the theresa:Thread of this card !M! times. Then add a copy into your hand."
+  },
+   "theresa:Branch": {
+    "NAME": "Branch",
+    "DESCRIPTION": "Deal !D! Damage. NL If you have other cards except for *Branch in your theresa:Particles pile, theresa:Linger 1.",
+    "EXTENDED_DESCRIPTION": [
+      "Chooe 1 theresa:Particles to put it to your draw pile.",
+      "Chooe 1 theresa:Particles to put it to your hand.",
+      "Chooe 1 theresa:Particles to put it to your discard pile.",
+      "Chooe 1 theresa:Particles to Exhaust it"
+    ]
+  },
+  "theresa:KingInheritance": {
+    "NAME": "King's Legacy",
+    "DESCRIPTION": "theresa:Dim . NL Increase the toplimit of theresa:Particles you can have by 1. NL Add a *Wound with Retain into your hand.",
+    "UPGRADE_DESCRIPTION": "theresa:Dim , Ethereal . NL  Increase the toplimit of theresa:Particles you can have by 1. NL Add a *Wound with Retain into your hand."
+  },
+  "theresa:WhenItIsBye": {
+    "NAME": "Good Bye",
+    "DESCRIPTION": "theresa:Dim . NL Decrease the toplimit of theresa:Particles you can have by 1. NL Increase the stats of your theresa:Thread by 1. NL Cost 1 more [E] after played.",
+    "UPGRADE_DESCRIPTION": "theresa:Dim , Ethereal . NL Decrease the toplimit of theresa:Particles you can have by 1. NL Increase the stats of your theresa:Thread by 1. NL Cost 1 more [E] after played."
+  },
+  "theresa:FromRose": {
+    "NAME": "Rose Riverside's Message",
+    "DESCRIPTION": "Lose 6 theresa:Hopeness . NL Then gian 1 theresa:Hopeness !M! times. NL Shuffled into draw pile after being played."
+  },
+  "theresa:FutureStop": {
+    "NAME": "Terminated Future",
+    "DESCRIPTION": "Add a *Termination between each 2 cards in your hand. NL If isn't played automatically, end your turn . NL Exhaust ."
+  },
+  "theresa:Withering":{
+    "NAME": "Wither",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! theresa:Necrosis . NL *When *being *transformed *into *or *exiting *Particles , apply !M! theresa:Necrosis to all enemies."
+  },
+  "theresa:GoodNight": {
+    "NAME": "Good Night",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! theresa:Necrosis . NL Apply theresa:Necrosis-Burst . NL If played automatically, this card will be played to all enemies."
+  },
+  "theresa:BeforeDust": {
+    "NAME": "Dust of Dream",
+    "DESCRIPTION": "Draw !M! cards. NL For each card that isn't drawn to your hand, deal !D! damage. NL Increase the cards this card can draw by 1."
+  },
+  "theresa:Wordless": {
+    "NAME": "Omit",
+    "DESCRIPTION": "theresa:Dim . NL Until the end of this turn, when you are about to draw cards, gain [E] instead. NL Draw !M! cards.",
+    "UPGRADE_DESCRIPTION": "theresa:Dim , Retain . NL Gain [E] . NL Until the end of this turn, you can't draw cards."
+  },
+  "theresa:UnforgivableSin": {
+    "NAME": "Confessarius",
+    "DESCRIPTION": "Deal !D! damage. NL For each card you have removed, deal additional !M! damage. NL *When *removed , add a *Sarkaz *Witness to your deck."
+  },
+  "theresa:NightBeforeWar": {
+    "NAME": "Eve of Defense",
+    "DESCRIPTION": "Gain 1 theresa:Hatred for !M! times. NL *When *removed , add a *Sarkaz *Illustration into your deck."
+  },
+  "theresa:CivilightEterna": {
+    "NAME": "Civilight Eterna",
+    "DESCRIPTION": "theresa:Dim , Ethereal . NL theresa:Reproduce !M! cards. NL Upgrade them in the rest of this run."
+  },
+  "theresa:SadDust": {
+    "NAME": "Dust to Dust",
+    "DESCRIPTION": "theresa:Dim . NL Add !M! *Dust with Exhaust into your theresa:Particle pile, which can exceed the toplimit of the theresa:Particles you can have.",
+    "UPGRADE_DESCRIPTION": "theresa:Dim , Retain . NL Add !M! *Dust with Exhaust into your theresa:Particle pile, which can exceed the toplimit of the theresa:Particles you can have."
+  },
+  "theresa:Cure": {
+    "NAME": "Cure",
+    "DESCRIPTION": "For each 5 HP you have lose, Heal 1 HP . NL When removed from your deck, increase your Max HP by !M! .",
+    "UPGRADE_DESCRIPTION": "For each 4 HP you have lose, Heal 1 HP . NL When removed from your deck, increase your Max HP by !M! ."
+  },
+  "theresa:FixLife": {
+    "NAME": "Weave the Livings",
+    "DESCRIPTION": "Gain !M! Weak and Frail . NL Reverse the effect of your Weak and Frail.",
+    "FLAVOR": "Please cure this Battle-scarred land"
+  },
+  "theresa:SadTime": {
+    "NAME": "When Sorrow Blooms",
+    "DESCRIPTION": "For each type of the cards: NL If you don't have this type of card in your hand, draw 1 card of this type.",
+    "UPGRADE_DESCRIPTION": "For each type of the cards: NL If there are less than !M! this type of cards in your hand, draw 1 card of this type."
+  },
+  "theresa:StoryTeller": {
+    "NAME": "The Story's Beginning",
+    "DESCRIPTION": "Draw !M! cards. NL Draw additional 1 card for all of your Powers.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Draw additional 1 card for all of your Powers and Curses."
+  },
+  "theresa:Enlightenment": {
+    "NAME": "Enlightenment",
+    "DESCRIPTION": "Scry !M! . NL Until end of your turn, randomize the turn cost of drawn cards. NL Draw !M! cards. NL Exhaust."
+  },
+
+  "theresa:GuiltyWillEnd": {
+    "NAME": "Atonement",
+    "DESCRIPTION": "theresa:Linger !M! times. NL When *Lingered , won't be Exhausted but be put into your hand instead. NL Exhaust ."
+  },
+  "theresa:DustWithLight": {
+    "NAME": "Among the light & the Dust",
+    "DESCRIPTION": "Increase the toplimit of theresa:Particles you can have by !M! . NL Draw !M! cards."
+  },
+  "theresa:DustFalls": {
+    "NAME": "The Dust Has Settled",
+    "DESCRIPTION": "Gain !M! theresa:Hopeness .",
+    "UPGRADE_DESCRIPTION": "Gain !M! theresa:Hopeness . NL Gain 1 theresa:Hopeness ."
+  },
+  "theresa:Finale": {
+    "NAME": "Shatter Melody",
+    "DESCRIPTION": "theresa:Dim . NL Can only be played if all of your Skill and Attack have theresa:Thread . NL Deal !D! damage to all enemies.",
+    "FLAVOR": "The End……has come.",
+    "EXTENDED_DESCRIPTION": [
+      "My draw pile hasn't been Weaved……",
+      "My hand hasn't been Weaved……",
+      "My discard pile hasn't been Weaved……"
+    ]
+  },
+  "theresa:EternalDust": {
+    "NAME": "Eternal Dust",
+    "DESCRIPTION": "Draw !M! cards . NL Gain [E] .",
+    "UPGRADE_DESCRIPTION": " Innate . NL Draw !M! cards . NL Gain [E] ."
+  },
+  "theresa:TheTransformer": {
+    "NAME": "Pact: Damazti",
+    "DESCRIPTION": "theresa:Dim . NL Add a copy of your theresa:Particle into your hand for !M! times. NL These copies will have Ethereal and Exhaust."
+  },
+  "theresa:TheBlooder": {
+    "NAME": "Pact: Duq'arael",
+    "DESCRIPTION": "theresa:Dim . NL Deal !D! damage. NL Shuffle a *Gift into your draw pile.",
+    "UPGRADE_DESCRIPTION": "theresa:Dim . NL Deal !D! damage. NL Shuffle a *Gift+ into your draw pile."
+  },
+  "theresa:TheBanshee": {
+    "NAME": "Pact: Laqeramaline",
+    "DESCRIPTION": "theresa:Dim . NL theresa:Weave random !M! cards in draw pile and discard pile with *Tears . NL Exhaust ."
+  },
+  "theresa:TheWar": {
+    "NAME": "Pact: Nezzsalem",
+    "DESCRIPTION": "theresa:Dim . NL Deal !D! damage to all enemies !M! times. NL Every 5% of target's theresa:Necrosis Effect increases the damage by 1.",
+    "UPGRADE_DESCRIPTION": "theresa:Dim . NL Deal !D! damage. NL *When *drawn , transform your Weak to Frail and lose 2 stacks of it."
+  },
+  "theresa:ThousandsWish": {
+    "NAME": "The Myriad Dreams",
+    "DESCRIPTION": "Choose 1 card in your draw pile to theresa:Weave it with *Dreams . NL For each 13 cards you draw, NL theresa:Linger !M! times.",
+    "UPGRADE_DESCRIPTION": " Innate . NL Choose 1 card in your draw pile to theresa:Weave it with *Dreams . NL For each 13 cards you draw, NL theresa:Linger !M! times."
+  },
+  "theresa:ManyLight": {
+    "NAME": "Interconected Light",
+    "DESCRIPTION": "Transform your draw pile into theresa:Particles that can exceed the toplimit of the theresa:Particles you can have. NL Put !M! *Particles into your hand. NL Exhaust ."
+  },
+  "theresa:OnlyForYou": {
+    "NAME": "Best Wishes For You",
+    "DESCRIPTION": "Apply the following effect to all your cards: NL theresa:Dim until you play this card. NL Draw 1 card for the next time you play this card. NL Exhaust ."
+  },
+  "theresa:TheAnswer": {
+    "NAME": "Pact: Fremont",
+    "DESCRIPTION": "theresa:Dim . NL Deal !D! damage. NL Play all of the Attacks in your theresa:Particles pile to the target.",
+    "UPGRADE_DESCRIPTION": "theresa:Dim . NL Deal !D! damage. NL Play all cards in your theresa:Particles pile to the target and draw that many cards. NL Exhaust ."
+  },
+  "theresa:HeroAndKing": {
+    "NAME": "The Hero and the King",
+    "DESCRIPTION": "When you play the card containing \" theresa:Hopeness / theresa:Hatred \" , gain !M! theresa:Hopeness / theresa:Hatred ."
+  },
+  "theresa:MemorizedMemory": {
+    "NAME": "Memorize my Memory",
+    "DESCRIPTION": "Repeat this process until you have no card to Weave in hand: NL Draw 1 card, theresa:Weave a random card with no theresa:Thread in your hand with *Mind . NL Exhaust ."
+  },
+  "theresa:DyingRose": {
+    "NAME": "Wither Rose",
+    "DESCRIPTION": "At the start of your turn, apply !M! theresa:Necrosis and 1 Vulnerable to all enemies. If the theresa:Necrosis has reached the toplimit, apply 1 additional theresa:Necrosis-Burst ."
+  },
+  "theresa:Rare": {
+    "NAME": "Precious Days",
+    "DESCRIPTION": "theresa:Dim . NL Gain 1 *Buffer . NL When being played from your hand, the adjacent cards cost !M! less [E] in this turn."
+  },
+  "theresa:MindOcean": {
+    "NAME": "Ocean of Solaris",
+    "DESCRIPTION": "Prevent the next !M! damage you take, and heal the source of damage that many instead. NL Exhaust ."
+  },
+  "theresa:MourningInMourning": {
+    "NAME": "Mourning",
+    "DESCRIPTION": "theresa:Dim . NL Apply 1 theresa:Gone-dust . NL Deal !D! damage. NL If the enemy has theresa:Gone-dust already , play this card twice and Exhaust ."
+  },
+  "theresa:FinalCountdown": {
+    "NAME": "Final Countdown",
+    "DESCRIPTION": "theresa:Dim . NL Remove all your theresa:Hopeness . NL Gain that many theresa:Hatred stack by stack.",
+    "FLAVOR": "\"If this is your choice……\""
+  },
+
+  "theresa:TheGift": {
+    "NAME": "Gift",
+    "DESCRIPTION": " Unplayable . NL When drawn into your hand, gain 1 theresa:Hatred , increase the damage of *Pact:Duq'arael by !M! , and draw1 card."
+  },
+  "theresa:Originium": {
+    "NAME": "\"Originium\"",
+    "DESCRIPTION": "Gain !M! Dexterity . NL *When *being *transformed *into *or *exiting *Particles , gain 1 Strength . NL Exhaust ."
+  },
+  "theresa:Stop": {
+    "NAME": "Termination",
+    "DESCRIPTION": " Unplayable . NL The *Thread of this card will effect !M! times."
+  },
+
+  "theresa:EasyMode": {
+    "NAME": "Hypothesis Deduction",
+    "DESCRIPTION": "*Easy *Mode NL Increase your Max HP by 10. NL Upgrade your Starter Relic."
+  },
+  "theresa:NormalMode": {
+    "NAME": "So-Called Fact",
+    "DESCRIPTION": "*Normal *Mode NL It is the fact what you have to face."
+  },
+    "theresa:Decide": {
+    "NAME": "Relentless",
+    "DESCRIPTION": "Ethereal . NL *When *drawn , all of the enemies gain 1 Strength .",
+    "UPGRADE_DESCRIPTION": "Ethereal . NL *When *drawn , all of the enemies gain 1 Strength , you randomly gain 1 Weak or 1 Frail ."
+  }
+}

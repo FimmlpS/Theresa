@@ -1,6 +1,7 @@
 package Theresa.card.power;
 
 import Theresa.action.RandomSilkAction;
+import Theresa.action.ThousandsWishAction;
 import Theresa.card.AbstractTheresaCard;
 import Theresa.patch.SilkPatch;
 import Theresa.power.buff.ThousandsWishPower;
@@ -19,11 +20,12 @@ public class ThousandsWish extends AbstractTheresaCard {
         super(ID,cardStrings.NAME,1,cardStrings.DESCRIPTION,CardType.POWER,CardRarity.RARE,CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
         SilkPatch.setSilkForPreview(this,new WishSilk());
+        shouldLocked = true;
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new RandomSilkAction(new WishSilk(),false,true));
+        addToBot(new ThousandsWishAction(1));
         addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new ThousandsWishPower(abstractPlayer,magicNumber),magicNumber));
     }
 

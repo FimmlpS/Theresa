@@ -16,8 +16,8 @@ public class TearSilk extends AbstractSilk{
     public TearSilk() {
         super(ID);
         this.name = powerStrings.NAME;
-        this.baseAmount = 3;
-        this.amount = 3;
+        this.baseAmount = 2;
+        this.amount = 2;
         this.img = ImageHelper.imgB;
         this.updateDescription();
     }

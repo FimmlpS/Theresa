@@ -21,6 +21,7 @@ public class TheDoctor extends AbstractTheresaCard {
         super(ID,getName(cardStrings.EXTENDED_DESCRIPTION[0],cardStrings.NAME),1,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.UNCOMMON,CardTarget.NONE);
         baseMagicNumber = magicNumber = 1;
         this.isInnate = true;
+        shouldLocked = true;
     }
 
     @Override

@@ -1,8 +1,10 @@
 package Theresa.card.attack;
 
+import Theresa.action.SpecialAnimationAction;
 import Theresa.action.WarAction;
 import Theresa.card.AbstractTheresaCard;
 import Theresa.card.status.TheGift;
+import Theresa.helper.AttackHelper;
 import Theresa.patch.OtherEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -26,6 +28,7 @@ public class TheBlooder extends AbstractTheresaCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        addToBot(new SpecialAnimationAction(AttackHelper.ForCharacter.Blooder));
         addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,damage,damageTypeForTurn), attackEffect));
         if(cardsToPreview != null) {
             addToBot(new MakeTempCardInDrawPileAction(cardsToPreview,1,true,true));

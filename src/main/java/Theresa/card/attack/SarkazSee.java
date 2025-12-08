@@ -23,7 +23,7 @@ public class SarkazSee extends AbstractTheresaCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,damage,damageTypeForTurn),attackEffect));
-        addToBot(new CivilightAction(CardGroup.CardGroupType.HAND,1).setType(true,false,false,false,false).setCopy(1,true,false));
+        addToBot(new CivilightAction(CardGroup.CardGroupType.HAND,1).setType(true,false,false,false,false).setCopy(1,true,false).setCostDiff(-1));
     }
 
     @Override

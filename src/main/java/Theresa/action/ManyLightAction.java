@@ -2,6 +2,7 @@ package Theresa.action;
 
 import Theresa.helper.TheresaHelper;
 import Theresa.patch.DustPatch;
+import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -29,7 +30,7 @@ public class ManyLightAction extends AbstractGameAction {
             c.current_y = CardGroup.DRAW_PILE_Y;
             c.drawScale = 0.5F;
             DustPatch.dustManager.addCard(c);
-            duration+=TIME_PAD;
+            duration += Gdx.graphics.getDeltaTime()+TIME_PAD;
         }
         else if(!discardRemains.isEmpty()){
             AbstractCard c = discardRemains.remove(0);
@@ -38,7 +39,7 @@ public class ManyLightAction extends AbstractGameAction {
             c.current_y = CardGroup.DISCARD_PILE_Y;
             c.drawScale = 0.5F;
             DustPatch.dustManager.addCard(c);
-            duration+=TIME_PAD;
+            duration += Gdx.graphics.getDeltaTime()+TIME_PAD;
         }
     }
 
@@ -57,8 +58,9 @@ public class ManyLightAction extends AbstractGameAction {
 //            }
             initial = true;
         }
-        if(duration<=startDuration)
+        if(duration<=startDuration){
             workOne();
+        }
         this.tickDuration();
     }
 }

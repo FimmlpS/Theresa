@@ -1,6 +1,7 @@
 package Theresa.silk;
 
 import Theresa.action.YoreLingerAction;
+import Theresa.patch.SilkPatch;
 import Theresa.power.buff.SilkPower;
 import Theresa.power.buff.YoreLingerPower;
 import com.badlogic.gdx.graphics.Color;
@@ -23,7 +24,10 @@ public abstract class AbstractSilk {
     public int amount = -1;
 
     public boolean canSpreadAtTurnEnd(AbstractCard cardToSpread, boolean atTurnEnd) {
-        return true;
+        AbstractSilk s = SilkPatch.SilkCardField.silk.get(cardToSpread);
+        if (s == null)
+            return true;
+        return canReplace(s);
     }
 
     public AbstractSilk(String ID) {

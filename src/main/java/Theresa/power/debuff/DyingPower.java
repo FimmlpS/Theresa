@@ -30,7 +30,7 @@ public class DyingPower extends AbstractTheresaPower {
         updateDescription();
     }
 
-    private float calculateReduced(boolean percent){
+    public float calculateReduced(boolean percent){
         float reduced = 0F;
         if(this.owner.currentHealth>0){
             reduced = (float)this.amount/(float)this.owner.currentHealth;

@@ -2,6 +2,7 @@ package Theresa.action;
 
 import Theresa.patch.DustPatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -24,6 +25,7 @@ public class AnswerAction extends AbstractGameAction {
         if(startDuration==duration){
             ArrayList<AbstractCard> dusts = new ArrayList<>(DustPatch.dustManager.dustCards);
             ArrayList<AbstractCard> attacks = new ArrayList<>();
+            int drawMany = 0;
             for(AbstractCard card : dusts){
                 if(upgraded||card.type == AbstractCard.CardType.ATTACK){
                     DustPatch.dustManager.removeCard(card);
@@ -31,13 +33,16 @@ public class AnswerAction extends AbstractGameAction {
                     //tmp.addToTop(card);
                     //tmp.moveToDiscardPile(card);
                     attacks.add(card);
+                    drawMany++;
                 }
             }
             for(AbstractCard card : attacks){
                 //AbstractCard copy = card.makeSameInstanceOf();
                 addToBot(new PlayCardAction(card,target,false));
             }
-
+            if(upgraded && drawMany>0){
+                addToBot(new DrawCardAction(drawMany));
+            }
         }
         this.tickDuration();
     }

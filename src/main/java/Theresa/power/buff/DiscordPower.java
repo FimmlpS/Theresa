@@ -36,6 +36,7 @@ public class DiscordPower extends AbstractTheresaPower {
             }
         }
         this.amount -= decrease;
+        updateDescription();
         if(this.amount <= 0){
             addToTop(new RemoveSpecificPowerAction(owner, owner, POWER_ID));
         }

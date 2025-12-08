@@ -1,5 +1,6 @@
 package Theresa.card.skill;
 
+import Theresa.action.HandToTopAction;
 import Theresa.card.AbstractTheresaCard;
 import Theresa.helper.TheresaHelper;
 import Theresa.power.buff.EndPower;
@@ -15,9 +16,10 @@ public class EndDust extends AbstractTheresaCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public EndDust() {
-        super(ID,cardStrings.NAME,9,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.COMMON,CardTarget.SELF);
-        baseMagicNumber = magicNumber = 4;
+        super(ID,cardStrings.NAME,2,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.COMMON,CardTarget.SELF);
+        baseMagicNumber = magicNumber = 5;
         exhaust = true;
+        shouldLocked = true;
     }
 
     @Override
@@ -29,7 +31,7 @@ public class EndDust extends AbstractTheresaCard {
     public void triggerWhenDrawn() {
         if(!TheresaHelper.drawnAsDust(this)) {
             this.flash();
-            addToBot(new DiscardSpecificCardAction(this, AbstractDungeon.player.hand));
+            addToBot(new DiscardSpecificCardAction(this));
             addToBot(new GainBlockAction(AbstractDungeon.player,magicNumber));
         }
     }

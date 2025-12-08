@@ -18,7 +18,7 @@ public class NightBeforeWar extends AbstractTheresaCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public NightBeforeWar() {
-        super(ID,cardStrings.NAME,0,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.UNCOMMON,CardTarget.SELF);
+        super(ID,cardStrings.NAME,1,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.UNCOMMON,CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         cardsToPreview = new AStory();
         CardModifierManager.addModifier(this,new EternalMod());

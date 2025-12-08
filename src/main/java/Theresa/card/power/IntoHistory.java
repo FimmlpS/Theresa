@@ -13,20 +13,20 @@ public class IntoHistory extends AbstractTheresaCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public IntoHistory() {
-        super(ID,cardStrings.NAME,2,cardStrings.DESCRIPTION,CardType.POWER,CardRarity.UNCOMMON,CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
+        super(ID,cardStrings.NAME,1,cardStrings.DESCRIPTION,CardType.POWER,CardRarity.UNCOMMON,CardTarget.SELF);
+        //baseMagicNumber = magicNumber = 1;
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new IntoHistoryPower(abstractPlayer,magicNumber),magicNumber));
+        addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new IntoHistoryPower(abstractPlayer,1)));
     }
 
     @Override
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            upgradeBaseCost(0);
         }
     }
 }

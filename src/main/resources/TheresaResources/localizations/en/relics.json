@@ -1,0 +1,153 @@
+{
+  "theresa:Babel": {
+    "NAME": "Medal of Babel",
+    "FLAVOR": "Its initial, and also ultimate, goal is to eliminate war itself by any means necessary.",
+    "DESCRIPTIONS": [
+      "At the start of the combat, draw 3 cards. Your initial toplimit of the #ytheresa:Particles you can have is 3."
+    ]
+  },
+  "theresa:UnknownRelic": {
+    "NAME": "Uncompiled Code",
+    "FLAVOR": "You don't need to figure out how it works. You shall just know the fact that it can interprete the truth of this world.",
+    "DESCRIPTIONS": [
+      "#rThe #rspecific #rfunction #ris #runknown. NL Will record the number of #yAction added to the execution queue since it was onece picked up."
+    ]
+  },
+
+  "theresa:TheEnd": {
+    "NAME": "Another Story",
+    "FLAVOR": "Sufficient time will inevitably yield an answer, and I am eternal.",
+    "DESCRIPTIONS": [
+      "When your cards gain #ytheresa:Tread , gain #b2 Block. NL At the start of the combat, #ytheresa:Weave 3 random cards in your hand with #yCocoon #yCages .",
+      "Cocoon Cages",
+      "#yParticles/ #yHand: At the end of your turn, if this card is Attack deal #b3 damage to a random enemy. Otherwise you gain 3 Block."
+    ]
+  },
+  "theresa:TheRecall": {
+    "NAME": "Memories of The Shard",
+    "FLAVOR": "\"It has pierced Victoria's heart, and is watching the empire bleed.\"",
+    "DESCRIPTIONS": [
+      "Increase the toplimit of the effect of your #ytheresa:Hopeness and #ytheresa:Hatred by 2. NL At the start of your turn, gain 1 #ytheresa:Hopeness or #ytheresa:Hatred with lower stacks."
+    ]
+  },
+  "theresa:DeadCane": {
+    "NAME": "Nachzehrer's Cane",
+    "FLAVOR": "Nachzehrer devours life and uses it. During the days when theresa following her teacher, she has wittness countless death.",
+    "DESCRIPTIONS": [
+      "At the start of your turn, apply #b3 #ytheresa:Necrosis to all enemies. Will apply additional 1 stack for each time you deal damage in the last turn. NL When an enemy die, you heal #b1 HP."
+    ]
+  },
+  "theresa:SingerMask": {
+    "NAME": "Great Banshee's Veil",
+    "FLAVOR": "The former Lord of the Banshees always seemed amicable, as if that were her only side... until she pulled out her bone pen, sang softly, and impaled agonizing wails into the minds of every intruder.",
+    "DESCRIPTIONS": [
+      "Increase your Non-Attack damage by #b2 . NL At the start of the combat and when you play a power, #ytheresa:Weave a random card in your hand with #yTears .",
+      "Tears",
+      "Can replace the #yCocoon #yCages . NL #yParticles/ #yHand: At the end of your turn, deal #b2 damage to a random enemy, and you gain #b2 Block."
+    ]
+  },
+  "theresa:BraveBlade": {
+    "NAME": "Fearless Blade",
+    "FLAVOR": "Before Kazdel's gates he stood, an impregnable bulwark. Gaulish artilleries, Leithanian casters, and Victorian Knights all took their shots at him. Yet, even when the gates fell and the coalition retreated, the Goliath did not yield an inch.",
+    "DESCRIPTIONS": [
+      "Increase the damage you deal from the cards that have #ytheresa:Thread by 33%. NL At the start of your turn, #ytheresa:Weave a random Attack in your hand with #yMind .",
+      "Mind",
+      "Can replace #yCocoon #Cages/Tears or be replaced by them. NL #yParticles : increase the toplimit of the effect of your Hopeness and Hatred by #b1 . NL #yWhen #yspread : gain 1 Hopeness or Hatred (Prioritize gaining the lower level one)."
+    ]
+  },
+  "theresa:TenRings": {
+    "NAME": "Ten Rings",
+    "FLAVOR": "Ten Rings that carry the mind of the King of Sarkaz. The shattering of each ring echoes the summons of woe..",
+    "DESCRIPTIONS": [
+      "At the start of the combat gain 1 #ytheresa:Echoism . For every 2 turns, you gain 1 toplimit of the #ytheresa:Particles you can have."
+    ]
+  },
+  "theresa:KnownRelic": {
+    "NAME": "\"Civilight Eterna\"",
+    "FLAVOR": "A small, black crown. But now you have understood the massive things it carries.",
+    "DESCRIPTIONS": [
+      "Replace the #yUncompiled Code NL Will record the number of #yAction added to the execution queue since it was onece picked up. NL NL If the count is no less than: NL #b2000 , at the start of the combat, gain 1 Strength and 1 Dexterity; NL #b4000 , at the start of the combat, gain [E] and draw 1 card; NL #b6000 , at the start of the combat add a random card into your hand, it cost 0 energy; NL #b8000 , gain 5 Max HP in each combat till the end of each combat; NL #b10000 ,When you would die, heal to 100% of your Max HP instead (works once)( #yhasn't #ytriggered ).",
+      "Replace the #yUncompiled Code NL Will record the number of #yAction added to the execution queue since it was onece picked up. NL NL If the count is no less than: NL #b2000 , at the start of the combat, gain 1 Strength and 1 Dexterity; NL #b4000 , at the start of the combat, gain [E] and draw 1 card; NL #b6000 , at the start of the combat add a random card into your hand, it cost 0 energy; NL #b8000 , gain 5 Max HP in each combat till the end of each combat; NL #b10000 ,When you would die, heal to 100% of your Max HP instead (works once)( #yhas #ytriggered )."
+    ]
+  },
+  "theresa:LittleCube": {
+    "NAME": "\"Little Cube\"",
+    "FLAVOR": "The Liches' vessel, capable of transcending time and space, proves even more durable in fantasies. Ermengarde spent a lot of time fixing it up.",
+    "DESCRIPTIONS": [
+      "Every time you #yautomatically play 3 cards, separately trigger: NL Gain #b5 Block; NL Draw 1 card; NL Let a random card in hand cost 1 less energy in this turn."
+    ]
+  },
+  "theresa:LiteratureBegins": {
+    "NAME": "Dawn of Literature",
+    "FLAVOR": "\"Aqqam Naqqun Sarqqam. That is 'Amnannam', the one and only curse, the uttering that kills even those who have yet to hear it. Now weep!\"",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain 1 [E] .At the start of the combat, enter #ytheresa:Calamity ."
+    ]
+  },
+  "theresa:BabelWord": {
+    "NAME": "Pledge of Babel",
+    "FLAVOR": "I have swear to it, to the future that I have given my all to build. I wish there would be no more pain on this land…….",
+    "DESCRIPTIONS": [
+      "Replace #yMedal #yof #yBabel NL At the start of your turn, draw additional cards till your #ytheresa:Particles zone is full. NL At the end of your turn, apply #b5 #ytheresa:Forget to the cards you have #ytheresa:Lingered in this turn, and then discard it."
+    ]
+  },
+  "theresa:EyeSpy": {
+    "NAME": "Eye of Ender",
+    "FLAVOR": "You just take a peek at the Ender World.",
+    "DESCRIPTIONS": [
+      "At the start of the combat, gain 1 #ytheresa:Ender . NL At the start of your turn, gain 1 energy. If you have lost HP in last turn, lose 2 energy at the start of your turn."
+    ]
+  },
+  "theresa:NamelessTotem": {
+    "NAME": "Nameless Totem",
+    "FLAVOR": "This totem once stood at a crossroads, where those who approached would trample the vague outline of a revenant until their feet bled and they died from exhaustion.",
+    "DESCRIPTIONS": [
+      "Upon pickup, remove 3 cards from your Deck. For each #yAttack / #ySkill you remove , add a #ySarkaz #yWittness / #ySarkaz #yIllustration to your Deck.",
+      "Their witness, their storytelling."
+    ]
+  },
+  "theresa:WhiteCrown": {
+    "NAME": "White Flower Crown",
+    "FLAVOR": "A floral veil used in Vampire rituals. Its once vibrant redness has been sucked empty, leaving nothing only a pale white color.",
+    "DESCRIPTIONS": [
+      "Upon pickup, add a #yPact: #yDuq'arael+ into your Deck. NL The damage-increasing effect of #yGift will be applied to all Attack at a rate of 25% of origin.",
+      "Gift"
+    ]
+  },
+  "theresa:UntoldFragments": {
+    "NAME": "Shard of the Untold Kings",
+    "FLAVOR": "Many stories remain folded within thoughts, waiting to be told.",
+    "DESCRIPTIONS": [
+      "At the end of your turn, for each energy you remain, trigger the #ytheresa:Thread of your #ytheresa:Particles for 1 time (Won't exceed the toplimit of your energy, Reset times of #yMind #ySilk before each trigger)."
+    ]
+  },
+  "theresa:GoDudeNoWord": {
+    "NAME": "Gul'dul's Silence",
+    "FLAVOR": "He stood at Kazdel's highest point and turned to stone. Until the day the Sarkaz forgot their King, and pushed the statue down with their own hands.",
+    "DESCRIPTIONS": [
+      "At the start of the combat, gain #b6 #yPlated #yArmor . NL Gain additional #b3 #yPlated #yArmor for each 10 cards your #ytheresa:Thread spread to."
+    ]
+  },
+  "theresa:QuiZaTueStaWord": {
+    "NAME": "Qui'sartuštaj's Promise",
+    "FLAVOR": "Within the layers of amassed hope and trust, he placed the crown on the ring-shaped structure, and knocked on the gates to the starry sky.",
+    "DESCRIPTIONS": [
+      "Your Strike and Defend can be Upgraded for any number of times. NL Upon pickup, add a #yCivilight #yEterna+ into your Deck, and add 5 random cards to the removed-cards record.",
+      "I Promise to You"
+    ]
+  },
+  "theresa:BaMissUsWord": {
+    "NAME": "Balor'sača's Arrogance",
+    "FLAVOR": "This land belongs to the Diablo, and there is no need for others. As their King, Balor'sača absolutely cannot allow the crown to fall on the head of another.",
+    "DESCRIPTIONS": [
+      "For each time you play an Attack, gain 1 #ytheresa:Hatred ."
+    ]
+  },
+  "theresa:IreShyWord": {
+    "NAME": "Yliš's Ravings",
+    "FLAVOR": "He was no longer his humble self, and lost the will to speak his own words. He became the first sacrifice to the crown's awakening.",
+    "DESCRIPTIONS": [
+      "Your #rMind can no longer replace the #yCocoon #yCages/ #yTears NL When you play a card, trigger its #ytheresa:Thread ."
+    ]
+  }
+}

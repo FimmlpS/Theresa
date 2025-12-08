@@ -15,13 +15,18 @@ public class DyingBurstPower extends AbstractTheresaPower {
     public DyingBurstPower(AbstractCreature owner, int amount) {
         super(POWER_ID, owner, amount);
         setDebuff();
-        setAmountDescription();
+        //setAmountDescription();
+    }
+
+    @Override
+    public void updateDescription() {
+        this.description = powerStrings.DESCRIPTIONS[0] + amount + powerStrings.DESCRIPTIONS[1] + 5*amount + powerStrings.DESCRIPTIONS[2];
     }
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         this.flash();
-        addToBot(new LoseHPAction(owner,owner,5));
+        addToBot(new LoseHPAction(owner,owner,5*amount));
         if(this.amount>1){
             addToBot(new ReducePowerAction(owner,owner,this,1));
         }

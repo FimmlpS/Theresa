@@ -16,15 +16,13 @@ public class FallFromMemory extends AbstractTheresaCard {
 
     public FallFromMemory() {
         super(ID,cardStrings.NAME,0,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.COMMON,CardTarget.NONE);
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        if(!dontTriggerOnUseCard){
-            addToBot(new DustAction(1));
-            addToBot(new SetNewCostAction(this,1));
-        }
+        addToBot(new DustAction(1));
+        addToBot(new SetNewCostAction(this, 1));
     }
 
     @Override

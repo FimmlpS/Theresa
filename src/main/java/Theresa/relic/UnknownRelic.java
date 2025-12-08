@@ -18,6 +18,15 @@ public class UnknownRelic extends CustomRelic {
         this.counter = 0;
     }
 
+    @Override
+    public void obtain() {
+        if(AbstractDungeon.player.hasRelic(UnknownRelic.ID)){
+            AbstractDungeon.player.getRelic(UnknownRelic.ID).counter+=10000;
+            return;
+        }
+        super.obtain();
+    }
+
     @SpirePatch(clz = GameActionManager.class,method = "addToBottom")
     @SpirePatch(clz = GameActionManager.class,method = "addToTop")
     public static class AddToBottomPatch {

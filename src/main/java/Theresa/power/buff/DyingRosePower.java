@@ -11,10 +11,24 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 public class DyingRosePower extends AbstractTheresaPower {
     public static final String POWER_ID = "theresa:DyingRosePower";
+    private int checkAmount = 0;
 
     public DyingRosePower(AbstractCreature owner, int amount) {
         super(POWER_ID, owner, amount);
-        setAmountDescription();
+        //setAmountDescription();
+        checkAmount = 1;
+        updateDescription();
+    }
+
+    @Override
+    public void stackPower(int stackAmount) {
+        super.stackPower(stackAmount);
+        checkAmount++;
+    }
+
+    @Override
+    public void updateDescription() {
+        this.description = powerStrings.DESCRIPTIONS[0] + amount + powerStrings.DESCRIPTIONS[1] + checkAmount + powerStrings.DESCRIPTIONS[2];
     }
 
     @Override
@@ -24,7 +38,7 @@ public class DyingRosePower extends AbstractTheresaPower {
             if(!mo.isDeadOrEscaped()) {
                 addToBot(new ApplyPowerAction(mo,this.owner,new DyingPower(mo, this.amount),this.amount));
                 addToBot(new ApplyPowerAction(mo,this.owner,new VulnerablePower(mo,1,false),1));
-                addToBot(new CheckDyingPowerAction(this.owner, mo));
+                addToBot(new CheckDyingPowerAction(this.owner, mo,this.checkAmount));
             }
         }
     }

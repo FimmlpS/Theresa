@@ -19,7 +19,8 @@ public class ImperialCourts extends AbstractTheresaCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new LostHPAction(abstractPlayer,abstractPlayer,3));
+        if(!isInAutoplay)
+            addToBot(new LostHPAction(abstractPlayer,abstractPlayer,3));
         //addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new FreeAttackPower(abstractPlayer,magicNumber),magicNumber));
         addToBot(new CourtsAction(upgraded));
     }

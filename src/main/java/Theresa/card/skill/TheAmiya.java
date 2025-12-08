@@ -21,6 +21,7 @@ public class TheAmiya extends AbstractTheresaCard {
         this.baseMagicNumber = magicNumber = 2;
         this.isInnate = true;
         this.exhaust = true;
+        shouldLocked = true;
     }
 
     @Override

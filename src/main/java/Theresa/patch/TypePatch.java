@@ -75,10 +75,12 @@ public class TypePatch {
                     AbstractDungeon.uncommonRelicPool.remove(Pear.ID);
                     AbstractDungeon.rareRelicPool.remove(Mango.ID);
                     AbstractDungeon.uncommonRelicPool.remove(SingingBowl.ID);
+                    AbstractDungeon.rareRelicPool.remove(Calipers.ID);
                 }
 
                 //ban的遗物
                 AbstractDungeon.shopRelicPool.remove(ChemicalX.ID);
+                AbstractDungeon.bossRelicPool.remove(TinyHouse.ID);
             }
         }
     }

@@ -3,6 +3,7 @@ package Theresa.action;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
@@ -23,8 +24,14 @@ public class BeforeDustAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if(DrawCardAction.drawnCards.size()<shouldAmount){
-            int sub = shouldAmount-DrawCardAction.drawnCards.size();
+        int actual = 0;
+        for(AbstractCard c : DrawCardAction.drawnCards){
+            if(AbstractDungeon.player.hand.contains(c)){
+                actual++;
+            }
+        }
+        if(actual<shouldAmount){
+            int sub = shouldAmount-actual;
             for(int i=0;i<sub;i++){
                 addToTop(new DamageAction(target,new DamageInfo(AbstractDungeon.player,amount,damageType),attackEffect));
             }

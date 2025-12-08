@@ -14,7 +14,7 @@ public class HoldDust extends AbstractTheresaCard {
 
     public HoldDust() {
         super(ID,cardStrings.NAME,1,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.UNCOMMON,CardTarget.NONE);
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
     }
 
     @Override

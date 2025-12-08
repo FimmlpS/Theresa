@@ -21,7 +21,7 @@ public class SadDust extends AbstractTheresaCard {
 
     public SadDust() {
         super(ID,cardStrings.NAME,1,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.UNCOMMON,CardTarget.NONE);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 3;
         tags.add(OtherEnum.Theresa_Darkness);
         AbstractCard c = new ADust();
         CardModifierManager.addModifier(c,new ExhaustMod());

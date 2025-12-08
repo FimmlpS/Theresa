@@ -6,8 +6,10 @@ import Theresa.action.YoreLingerAction;
 import Theresa.helper.TheresaHelper;
 import Theresa.modcore.TheresaMod;
 import Theresa.power.buff.YoreLingerPower;
+import Theresa.relic.GoDudeNoWord;
 import Theresa.relic.TheEnd;
 import Theresa.silk.AbstractSilk;
+import Theresa.silk.MindSilk;
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -93,6 +95,11 @@ public class SilkPatch {
             if(AbstractDungeon.actionManager != null && r instanceof TheEnd){
                 ((TheEnd) r).onTriggerSilk(card);
             }
+
+            r = AbstractDungeon.player.getRelic(GoDudeNoWord.ID);
+            if(AbstractDungeon.actionManager != null && r instanceof GoDudeNoWord){
+                r.onTrigger();
+            }
         }
     }
 
@@ -118,6 +125,9 @@ public class SilkPatch {
                     silk.afterPlayed();
                 if(triggerType==TriggerType.ALL || triggerType==TriggerType.ON_COPIED)
                     silk.onCopied();
+            }
+            if(silk instanceof MindSilk && (triggerType==TriggerType.ALL || triggerType==TriggerType.ON_COPIED) && triggerTimes>0){
+                MindSilk.triggerMindSilk();
             }
         }
     }

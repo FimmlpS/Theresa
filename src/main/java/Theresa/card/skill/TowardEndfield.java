@@ -23,8 +23,8 @@ public class TowardEndfield extends AbstractTheresaCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         for(int i =0;i<magicNumber;i++)
-            addToBot(new DustToPileAction(null, CardGroup.CardGroupType.HAND).setRandom());
-        addToBot(new TowardEndfieldAction(2));
+            addToBot(new DustToPileAction(null, CardGroup.CardGroupType.HAND).setPrev());
+        addToBot(new TowardEndfieldAction(magicNumber));
     }
 
 

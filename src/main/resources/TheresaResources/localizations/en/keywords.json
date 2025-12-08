@@ -1,0 +1,134 @@
+[
+  {
+    "NAMES": [
+      "particles"
+    ],
+    "DESCRIPTION": "If the Particales you have are less than the toplimit, transform the Attack or Skill you draw into #yParticles . NL At the start of your turn #yLinger 1 ."
+  },
+  {
+    "NAMES": [
+      "linger",
+      "lingered"
+    ],
+    "DESCRIPTION": "Play a copy of a random #yParticle . The #yParticle which has Exhaust keyword will be exhausted during this process."
+  },
+  {
+    "NAMES": [
+      "reproduce"
+    ],
+    "DESCRIPTION": "Choose 1 #ycard #yyou #yhave #yremoved #yin #ythis #yrun and add it to your hand, it cost 1 less energy and will have Exhasut keyword. NL Each card can only be #yReproduced for 1 time in every combat."
+  },
+  {
+    "NAMES": [
+      "eterna"
+    ],
+    "DESCRIPTION": "Have both #bEthereal and #bExhaust keywords, and can't be transformed into Particles. NL #yWhen #yExhausted : draw 1 card. NL #yWhen #yplayed : removed from your deck. NL #yAfter #yReproduced : remove the Eterna keyword and won't get Exhaust through Reproduce."
+  },
+  {
+    "NAMES": [
+      "weave"
+    ],
+    "DESCRIPTION": "Let the target card be attached with #yThread , each card can only have 1 kind of #Thread effect."
+  },
+  {
+    "NAMES": [
+      "thread"
+    ],
+    "DESCRIPTION": "Will give additional effect to the card. NL At the end of your turn, the cards with #yThread will spread their #yThread to #bAdjacent cards."
+  },
+  {
+    "NAMES": [
+      "dim"
+    ],
+    "DESCRIPTION": "Won't be transformed into #yParticles ."
+  },
+  {
+    "NAMES": [
+      "lose"
+    ],
+    "DESCRIPTION": "You won't die through this action. You won't lose HP when auto-played."
+  },
+  {
+    "NAMES": [
+      "blur"
+    ],
+    "DESCRIPTION": "Block is not removed at the start of your next turn."
+  },
+  {
+    "NAMES": [
+      "Sarkaz's Hatred",
+      "hatred"
+    ],
+    "DESCRIPTION": "When you gain #rHatred , deal damage equals to the #rHatred you have to all enemies(At most 6). NL #yTransformed at the end of your turn."
+  },
+  {
+    "NAMES": [
+      "Therasa's Hopeness",
+      "hopeness"
+    ],
+    "DESCRIPTION": "When you gain #yHopeness , gain Block equals to the #yHopeness you have(At most 6). NL #yTransformed at the end of your turn."
+  },
+  {
+    "NAMES": [
+      "transform",
+      "transformed"
+    ],
+    "DESCRIPTION": "Turn either 1 #rHatred or 1 #gHopeness which are less than the others into the others."
+  },
+  {
+    "NAMES": [
+      "wishing"
+    ],
+    "DESCRIPTION": "Won't be transformed into #yParticles . Draw 1 card and remove this effect when played."
+  },
+  {
+    "NAMES": [
+      "necrosis"
+    ],
+    "DESCRIPTION": "The enemies who have Necrosis will deal NL #b(Necrosis/Max HP)*100% less damage through attack NL (At most 25%) NL When the Necrosis an enemy have is no less than HP, die at onece."
+  },
+  {
+    "NAMES": [
+      "Necrosis Burst",
+      "necrosis-burst"
+    ],
+    "DESCRIPTION": "Will last for 1 turn. During this turn, double the damage dealing decrease effect and the toplimit of Necrosis. Lose 5 HP at the end of turn."
+  },
+  {
+    "NAMES": [
+      "Forget X",
+      "forget"
+    ],
+    "DESCRIPTION": "When get out of Particles, let the enemy whose HP is the highest lose X% of the HP he have(no less than X)."
+  },
+  {
+    "NAMES": [
+      "connective"
+    ],
+    "DESCRIPTION": "The Thread of this card will take effect 1 more time."
+  },
+  {
+    "NAMES": [
+      "ender"
+    ],
+    "DESCRIPTION": "For each #yParticles you have, decrease the damage you take and the HP you lose by 1 ."
+  },
+  {
+    "NAMES": [
+      "echoism"
+    ],
+    "DESCRIPTION": "At the start of your turn, you will #yLinger 1 more time."
+  },
+  {
+    "NAMES": [
+      "calamity"
+    ],
+    "DESCRIPTION": "#yStatus : the damage you take will be increased by 20%. After losing HP or taking damage exit the Calamity , and then decrease the damage you take by 20% in this turn."
+  },
+  {
+    "NAMES": [
+      "gone-dust"
+    ],
+    "DESCRIPTION": "You won't take damage but will get that many #yNecrosis instead ."
+  }
+]

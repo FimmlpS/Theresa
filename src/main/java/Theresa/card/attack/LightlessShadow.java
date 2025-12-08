@@ -14,7 +14,7 @@ public class LightlessShadow extends AbstractTheresaCard {
 
     public LightlessShadow() {
         super(ID,cardStrings.NAME,1,cardStrings.DESCRIPTION,CardType.ATTACK,CardRarity.UNCOMMON,CardTarget.ENEMY);
-        baseDamage = damage = 7;
+        baseDamage = damage = 6;
         baseMagicNumber = magicNumber = 3;
     }
 

@@ -11,9 +11,7 @@ import java.util.Collections;
 
 public class RandomSilkAction extends AbstractGameAction {
     public RandomSilkAction(AbstractSilk silk, boolean mustReplace, boolean canReplace) {
-        this.silk = silk;
-        this.mustReplace = mustReplace;
-        this.canReplace = canReplace;
+        this(AbstractDungeon.player.hand.group, silk, mustReplace, canReplace);
     }
 
     public RandomSilkAction setTypeOnly(AbstractCard.CardType type) {
@@ -22,12 +20,21 @@ public class RandomSilkAction extends AbstractGameAction {
         return this;
     }
 
+    public RandomSilkAction(ArrayList<AbstractCard> cards, AbstractSilk silk, boolean mustReplace, boolean canReplace){
+        this.cards = cards;
+        this.silk = silk;
+        this.mustReplace = mustReplace;
+        this.canReplace = canReplace;
+    }
+
+    ArrayList<AbstractCard> cards;
+
     @Override
     public void update() {
         //2025/10/28 改：优先无丝线牌，然后有丝线牌（替换）
         ArrayList<AbstractCard> cardsTo = new ArrayList<>();
         ArrayList<AbstractCard> replaced = new ArrayList<>();
-        for(AbstractCard c : AbstractDungeon.player.hand.group) {
+        for(AbstractCard c : cards) {
             if(typeOnly && c.type != cardType)
                 continue;
             if(!silk.canSetWhenSet(c))

@@ -21,6 +21,7 @@ public class DustFalls extends AbstractTheresaCard {
         super(ID,cardStrings.NAME,1,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.RARE,CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         SilkPatch.setSilkWithoutTrigger(this,new WishSilk());
+        shouldLocked = true;
     }
 
     @Override

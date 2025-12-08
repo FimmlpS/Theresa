@@ -1,0 +1,62 @@
+{
+  "theresa:Tags": {
+    "TEXT": [
+      "theresa:Particles",
+      "theresa:Linger",
+      "theresa:Weave",
+      "theresa:Thread",
+      "theresa:Wishing",
+      "theresa:Sarkaz's Hatred",
+      "theresa:Therasa's Hopeness",
+      "theresa:Transform",
+      "theresa:Forget",
+      "theresa:Eterna",
+      "theresa:Connective"
+    ]
+  },
+  "theresa:Operation": {
+    "TEXT": [
+      "Choose",
+      "Particles to put them into your",
+      "draw pile",
+      "hand",
+      "discard pile",
+      "Exhaustt pile",
+      "to transform them into Particles",
+      "Choose at most",
+      "cards to Weave them with Cocoon Cages",
+      "cards to discard, and transform them into Particles if they can be",
+      "cards to put in",
+      "cards to Weave them with Mind"
+    ]
+  },
+  "theresa:TypeSelect": {
+    "TEXT": [
+      "Mode Selection"
+    ],
+    "EXTRA_TEXT": [
+      "Easy",
+      "Normal"
+    ]
+  },
+    "theresa:TheBabel": {
+    "TEXT": [
+      "The imaginary enemies won't really defeat you…… \n ……You just still can't break out from your past",
+      "Number of enemies not yet spawned: "
+    ],
+    "EXTRA_TEXT": [
+      "「Rhodes Island」in ■■"
+    ]
+  },
+  "theresa:Monster": {
+    "TEXT": [
+      "13 Deathveil Assassin"
+    ]
+  },
+  "theresa:Config": {
+    "TEXT": [
+      "Enable Shader?",
+      "Mod设置"
+    ]
+  }
+}

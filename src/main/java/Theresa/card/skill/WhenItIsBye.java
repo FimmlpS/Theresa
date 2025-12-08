@@ -1,6 +1,7 @@
 package Theresa.card.skill;
 
 import Theresa.action.IncreaseMaxDustAction;
+import Theresa.action.SetNewCostAction;
 import Theresa.card.AbstractTheresaCard;
 import Theresa.patch.OtherEnum;
 import Theresa.power.buff.SilkPower;
@@ -23,6 +24,7 @@ public class WhenItIsBye extends AbstractTheresaCard {
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new IncreaseMaxDustAction(-1));
         addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new SilkPower(abstractPlayer,1),1));
+        addToBot(new SetNewCostAction(this,1));
     }
 
     @Override

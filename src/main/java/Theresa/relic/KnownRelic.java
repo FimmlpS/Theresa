@@ -61,17 +61,17 @@ public class KnownRelic extends CustomRelic implements CustomSavable<Boolean> {
 
     @Override
     public void atBattleStartPreDraw() {
-        if(this.counter>=1500){
+        if(this.counter>=2000){
             this.flash();
             AbstractPlayer p = AbstractDungeon.player;
             addToBot(new RelicAboveCreatureAction(p, this));
             addToBot(new ApplyPowerAction(p,p,new StrengthPower(p,1),1));
             addToBot(new ApplyPowerAction(p,p,new DexterityPower(p,1),1));
-            if(this.counter>=3000){
+            if(this.counter>=4000){
                 addToBot(new GainEnergyAction(1));
                 addToBot(new DrawCardAction(1));
             }
-            if(this.counter>=4500){
+            if(this.counter>=6000){
                 AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.POWER).makeCopy();
                 if (c.cost >= 0) {
                     c.updateCost(-99);
@@ -79,7 +79,7 @@ public class KnownRelic extends CustomRelic implements CustomSavable<Boolean> {
                 UnlockTracker.markCardAsSeen(c.cardID);
                 this.addToBot(new MakeTempCardInHandAction(c));
             }
-            if(this.counter>=6000){
+            if(this.counter>=8000){
                 addedHP = true;
                 p.increaseMaxHp(5,true);
             }
@@ -115,7 +115,7 @@ public class KnownRelic extends CustomRelic implements CustomSavable<Boolean> {
 
             AbstractRelic hj = AbstractDungeon.player.getRelic(ID);
             if (hj instanceof KnownRelic) {
-                if (hj.counter >= 7500 && !((KnownRelic) hj).respawned) {
+                if (hj.counter >= 10000 && !((KnownRelic) hj).respawned) {
                     ((KnownRelic) hj).respawned = true;
                     _inst.currentHealth = 0;
                     _inst.heal(_inst.maxHealth);
