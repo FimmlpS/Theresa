@@ -15,8 +15,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-import java.util.ArrayList;
-
 public class WishSilk extends AbstractSilk{
     public static final String ID = "theresa:WishSilk";
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
@@ -46,6 +44,8 @@ public class WishSilk extends AbstractSilk{
 
     @Override
     public boolean canSetWhenSet(AbstractCard card) {
+        if(card.hasTag(OtherEnum.Theresa_Silk_Cannot_Replaced))
+            return false;
         if(!TheresaHelper.canBecomeDust(card,true))
             return false;
         int amt = 0;

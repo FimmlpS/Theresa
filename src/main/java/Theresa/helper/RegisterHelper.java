@@ -105,6 +105,7 @@ public class RegisterHelper {
         list.add(new FixLife());
         list.add(new SadTime());
         list.add(new StoryTeller());
+        list.add(new UnwaveringDust());
         list.add(new Enlightenment());
 
         //RARE

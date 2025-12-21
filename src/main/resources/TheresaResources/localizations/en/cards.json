@@ -335,8 +335,8 @@
   },
   "theresa:FixLife": {
     "NAME": "Weave the Livings",
-    "DESCRIPTION": "Gain !M! Weak and Frail . NL Reverse the effect of your Weak and Frail.",
-    "FLAVOR": "Please cure this Battle-scarred land"
+    "DESCRIPTION": "Gain !M! Weak and Frail. NL Reverse the effect of your Weak, Frail and Vulnerable.",
+    "FLAVOR": "Let us cure this Battle-scarred land"
   },
   "theresa:SadTime": {
     "NAME": "When Sorrow Blooms",
@@ -347,6 +347,10 @@
     "NAME": "The Story's Beginning",
     "DESCRIPTION": "Draw !M! cards. NL Draw additional 1 card for all of your Powers.",
     "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Draw additional 1 card for all of your Powers and Curses."
+  },
+  "theresa:UnwaveringDust": {
+    "NAME": "Unwavering Dust",
+    "DESCRIPTION": "Gain [E] . NL Add a copy of this card to theresa:Particle pile without toplimit. NL *Silk *Cannot *Be *Replaced. NL Exhaust."
   },
   "theresa:Enlightenment": {
     "NAME": "Enlightenment",

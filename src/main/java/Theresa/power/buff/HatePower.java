@@ -85,7 +85,7 @@ public class HatePower extends AbstractTheresaPower {
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
         singleUpdate();
-        this.flash();
+        this.flashWithoutSound();
         int amt = Math.min(initialMax+extraMax, amount);
         if(this.owner.isPlayer){
             addToBot(new DamageAllEnemiesAction(this.owner, DamageInfo.createDamageMatrix(amt,true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE,true));

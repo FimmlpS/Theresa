@@ -43,7 +43,9 @@ public class TheAmiya extends AbstractTheresaCard {
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
-            SilkPatch.setSilkWithoutTrigger(this,new NormalSilk());
+            NormalSilk n = new NormalSilk();
+            n.baseAmount = n.amount = 6;
+            SilkPatch.setSilkWithoutTrigger(this,n);
         }
     }
 }

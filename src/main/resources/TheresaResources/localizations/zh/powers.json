@@ -134,7 +134,7 @@
   "theresa:FixLifePower": {
     "NAME": "缝补生命",
     "DESCRIPTIONS": [
-      "反转你的 #y虚弱 和 #y脆弱 效果。"
+      "反转你的 #y虚弱 ， #y脆弱 和 #y易伤 效果。"
     ]
   },
   "theresa:MindPower": {

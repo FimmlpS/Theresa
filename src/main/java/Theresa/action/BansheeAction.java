@@ -25,7 +25,7 @@ public class BansheeAction extends AbstractGameAction {
             AbstractCard c = cards.remove(0);
             AbstractSilk tear = new TearSilk();
             AbstractSilk silk = SilkPatch.SilkCardField.silk.get(c);
-            if(silk == null || tear.canReplace(silk)){
+            if(tear.canSetWhenSet(c) && (silk == null || tear.canReplace(silk))){
                 if(silk!=null && tear.canReplace(silk))
                     tear.amount = silk.amount;
                 SilkPatch.setSilk(c, tear);

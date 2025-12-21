@@ -335,7 +335,7 @@
   },
   "theresa:FixLife": {
     "NAME": "缝补生命",
-    "DESCRIPTION": "获得 !M! 层 虚弱 和 脆弱 。 NL 你拥有的虚弱和脆弱效果反转。",
+    "DESCRIPTION": "获得 !M! 层 虚弱 和 脆弱 。 NL 你拥有的虚弱，脆弱和 易伤 效果反转。",
     "FLAVOR": "治愈这片创痕累累的大地"
   },
   "theresa:SadTime": {
@@ -347,6 +347,10 @@
     "NAME": "故事的起点",
     "DESCRIPTION": "抽 !M! 张牌。 NL 你每有1张能力牌，额外抽1张牌。",
     "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 你每有1张能力或诅咒牌，额外抽1张牌。"
+  },
+  "theresa:UnwaveringDust": {
+    "NAME": "不渝尘埃",
+    "DESCRIPTION": "获得 [E] 。 NL 将复制可超出上限地放入 theresa:微尘 。 NL *此牌丝线不可被替换 。 NL 消耗 。"
   },
   "theresa:Enlightenment": {
     "NAME": "启迪",

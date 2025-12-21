@@ -88,7 +88,7 @@ public class Branch extends AbstractTheresaCard {
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
-            upgradeDamage(4);
+            upgradeDamage(6);
         }
     }
 }

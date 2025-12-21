@@ -75,7 +75,7 @@ public class HopePower extends AbstractTheresaPower {
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
         singleUpdate();
-        this.flash();
+        this.flashWithoutSound();
         int amt = Math.min(initialMax+extraMax, amount);
         addToBot(new GainBlockAction(this.owner, amt));
     }

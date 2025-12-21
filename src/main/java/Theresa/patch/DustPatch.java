@@ -25,6 +25,7 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.unique.ApotheosisAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -284,6 +285,23 @@ public class DustPatch {
             if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT){
                 for(AbstractCard c:DustPatch.dustManager.dustCards){
                     c.tookDamage();
+                }
+            }
+        }
+    }
+
+    //2025/12/21 神化兼容微尘
+    @SpirePatch(clz = ApotheosisAction.class,method = "update")
+    public static class ApotheosisActionPatch{
+        @SpirePostfixPatch
+        public static void Postfix(ApotheosisAction _inst){
+            if(_inst.isDone){
+                for(AbstractCard c : dustManager.dustCards) {
+                    if (c.canUpgrade()) {
+                        c.superFlash();
+                        c.upgrade();
+                        c.applyPowers();
+                    }
                 }
             }
         }

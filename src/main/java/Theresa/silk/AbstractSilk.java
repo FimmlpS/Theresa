@@ -1,9 +1,8 @@
 package Theresa.silk;
 
-import Theresa.action.YoreLingerAction;
+import Theresa.patch.OtherEnum;
 import Theresa.patch.SilkPatch;
 import Theresa.power.buff.SilkPower;
-import Theresa.power.buff.YoreLingerPower;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
@@ -96,7 +95,7 @@ public abstract class AbstractSilk {
     }
 
     public boolean canSetWhenSet(AbstractCard c){
-        return true;
+        return !c.hasTag(OtherEnum.Theresa_Silk_Cannot_Replaced);
     }
 
     public void atTurnEnd(CardGroup.CardGroupType type) {

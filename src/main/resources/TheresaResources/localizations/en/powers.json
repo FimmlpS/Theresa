@@ -134,7 +134,7 @@
   "theresa:FixLifePower": {
     "NAME": "Weave the Livings",
     "DESCRIPTIONS": [
-      "Reverse the effect of your #yWeak and #yFrail."
+      "Reverse the effect of your #yWeak, #yFrail and #yVulnerable."
     ]
   },
   "theresa:MindPower": {

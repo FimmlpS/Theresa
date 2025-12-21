@@ -20,6 +20,7 @@ public class BeforeDust extends AbstractTheresaCard {
         baseMagicNumber = magicNumber = 4;
     }
 
+
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new TheresaAttackAction(true));

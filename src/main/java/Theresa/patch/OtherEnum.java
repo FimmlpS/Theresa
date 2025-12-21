@@ -10,4 +10,7 @@ public class OtherEnum {
 
     @SpireEnum
     public static AbstractCard.CardTags Theresa_Darkness;
+
+    @SpireEnum
+    public static AbstractCard.CardTags Theresa_Silk_Cannot_Replaced;
 }
