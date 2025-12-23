@@ -98,6 +98,9 @@ public class HopePower extends AbstractTheresaPower {
             if(silk instanceof MindSilk)
                 ex+=silk.amount;
         }
+        if(ex > MindSilk.getTotalAmount()){
+            ex = MindSilk.getTotalAmount();
+        }
         if(AbstractDungeon.player.hasRelic(TheRecall.ID))
             ex+=2;
         if(ex!=extraMax){

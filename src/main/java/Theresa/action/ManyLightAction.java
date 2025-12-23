@@ -23,6 +23,9 @@ public class ManyLightAction extends AbstractGameAction {
     boolean initial = false;
 
     private void workOne(){
+        //2025/12/22 新增微尘绝对上限15
+        if(DustPatch.dustManager.dustCards.size()>=DustPatch.ABSOLUTELY_TOP_LIMIT)
+            return;
         if(!drawRemains.isEmpty()){
             AbstractCard c = drawRemains.remove(0);
             AbstractDungeon.player.drawPile.removeCard(c);

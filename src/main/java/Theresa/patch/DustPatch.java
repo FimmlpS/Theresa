@@ -43,6 +43,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class DustPatch {
+    public static final int ABSOLUTELY_TOP_LIMIT = 15;
     private static final float Y_OFFSET = 70F * Settings.scale;
     private static final float CIRCLE_DRAW_SCALE = 0.15F;
     private static final float PREVIEW_DRAW_SCALE = 0.7F;

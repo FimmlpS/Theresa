@@ -117,8 +117,8 @@
   },
   "theresa:UnseenFuture": {
     "NAME": "The Future Elusive",
-    "DESCRIPTION": "Deal !D! damage. NL Add Exhaust to all starter cards in theresa:Particles pile. NL theresa:Linger 1 for each starter cards in theresa:Particles pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply Exhaust to all starter cards in theresa:Particles pile. NL theresa:Linger 1 for each Exhaust card in theresa:Particles pile."
+    "DESCRIPTION": "Deal !D! damage. NL Add Exhaust to all starter cards in theresa:Particles pile. NL theresa:Linger 1 for each starter cards in theresa:Particles pile (3 times at most).",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply Exhaust to all starter cards in theresa:Particles pile. NL theresa:Linger 1 for each Exhaust card in theresa:Particles pile (3 times at most)."
   },
   "theresa:Silk": {
     "NAME": "Silk",
@@ -230,7 +230,7 @@
   },
   "theresa:NarrativeSong": {
     "NAME": "Narrative Song",
-    "DESCRIPTION": "Shuffle your discard pile into your draw pile. NL Spread the theresa:Thread of the cards in your draw pile to their adjacent cards."
+    "DESCRIPTION": "Shuffle your discard pile into top of your draw pile. NL Spread the theresa:Thread of the cards in your draw pile to their adjacent cards."
   },
   "theresa:ConnectedPain": {
     "NAME": "Pain Connection",

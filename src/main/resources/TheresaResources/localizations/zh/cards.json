@@ -117,8 +117,8 @@
   },
   "theresa:UnseenFuture": {
     "NAME": "明日渺远不及",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 为 theresa:微尘 中所有基础牌添加 消耗 ，每有1张基础牌 theresa:萦绕 1次。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 为 theresa:微尘 中所有基础牌添加 消耗 ，每有1张消耗牌 theresa:萦绕 1次。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 为 theresa:微尘 中所有基础牌添加 消耗 ，每有1张基础牌 theresa:萦绕 1次（至多3次）。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 为 theresa:微尘 中所有基础牌添加 消耗 ，每有1张消耗牌 theresa:萦绕 1次（至多3次）。"
   },
   "theresa:Silk": {
     "NAME": "丝缕",
@@ -230,7 +230,7 @@
   },
   "theresa:NarrativeSong": {
     "NAME": "叙事曲",
-    "DESCRIPTION": "将弃牌堆洗入抽牌堆。 NL 使抽牌堆 theresa:丝线 相邻复制。"
+    "DESCRIPTION": "将弃牌堆洗到抽牌堆顶。 NL 使抽牌堆 theresa:丝线 相邻复制。"
   },
   "theresa:ConnectedPain": {
     "NAME": "痛觉相连",

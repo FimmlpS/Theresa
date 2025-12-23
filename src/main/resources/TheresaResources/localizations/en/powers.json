@@ -202,7 +202,8 @@
     "NAME": "theresa:Mind",
     "DESCRIPTIONS": [
       "Can replace #yCocoon #Cages/Tears or be replaced by them. NL #yParticles : increase the toplimit of the effect of your Hopeness and Hatred by #b",
-      " . NL #yWhen #yspread : gain 1 Hopeness or Hatred(Prioritize gaining the lower level one;  #rCan #rtriggered #r3 #rtimes #rbetween #revery #r2 #rcards #ryou #rplay.).",
+      " (At most #b",
+      " in total). NL #yWhen #yspread : gain 1 Hopeness or Hatred(Prioritize gaining the lower level one;  #rCan #rtriggered #r3 #rtimes #rbetween #revery #r2 #rcards #ryou #rplay ).",
       "#rCan #ronly #rspread #rto #rthe #rcards #rof #rthe #rsame #rtype. NL #yParticles/ #yHand: increase the Hopeness and Hatred by #b"
     ]
   },

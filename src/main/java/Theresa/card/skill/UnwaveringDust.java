@@ -28,7 +28,7 @@ public class UnwaveringDust extends AbstractTheresaCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new GainEnergyAction(1));
-        addToBot(new MakeTempCardInDustAction(this,1,true).setOverMake());
+        addToBot(new MakeTempCardInDustAction(this,1,true).setOverMake().notToHand());
     }
 
     @Override

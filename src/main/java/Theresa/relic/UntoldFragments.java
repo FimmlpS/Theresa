@@ -17,11 +17,16 @@ public class UntoldFragments extends CustomRelic {
 
     @Override
     public void onPlayerEndTurn() {
-        int energy = Math.min(AbstractDungeon.player.energy.energy, EnergyPanel.getCurrentEnergy());
+        int energy = EnergyPanel.getCurrentEnergy();
+        int triggerTimes = 0;
         if(energy > 0) {
             this.flash();
+            triggerTimes++;
         }
-        for(int i = 0;i<energy;i++) {
+        if(energy>=AbstractDungeon.player.energy.energy) {
+            triggerTimes++;
+        }
+        for(int i = 0;i<triggerTimes;i++) {
             addToBot(new TriggerDustSilkAction());
         }
     }

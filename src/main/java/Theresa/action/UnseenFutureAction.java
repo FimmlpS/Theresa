@@ -28,6 +28,9 @@ public class UnseenFutureAction extends AbstractGameAction {
             }
         }
         if(amt>0){
+            if(amt>3){
+                amt = 3;
+            }
             addToTop(new DustAction(amt));
         }
         this.isDone = true;

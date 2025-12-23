@@ -18,8 +18,9 @@ public class EternalDust extends AbstractTheresaCard {
     public EternalDust() {
         super(ID,cardStrings.NAME,1,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.RARE,CardTarget.NONE);
         baseMagicNumber = magicNumber = 1;
-
-        SilkPatch.setSilkWithoutTrigger(this,new MemorySilk());
+        MemorySilk ms = new MemorySilk();
+        ms.baseAmount = ms.amount = 2;
+        SilkPatch.setSilkWithoutTrigger(this,ms);
     }
 
     @Override

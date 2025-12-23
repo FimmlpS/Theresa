@@ -3,9 +3,12 @@ package Theresa.character;
 import Theresa.card.skill.ADust;
 import Theresa.helper.RegisterHelper;
 import Theresa.modcore.TheresaMod;
+import Theresa.orb.TheresaEnergyOrb;
 import Theresa.patch.ClassEnum;
 import Theresa.patch.ColorEnum;
+import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
+import basemod.animations.G3DJAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -31,17 +34,19 @@ public class Theresa extends CustomPlayer {
     private static final CharacterStrings characterStrings;
 
     public static final String[] orbTextures = new String[]{
+            "TheresaResources/img/orbs/2.png",
+            "TheresaResources/img/orbs/3.png",
+            "TheresaResources/img/orbs/4.png",
+            "TheresaResources/img/orbs/5.png",
+            "TheresaResources/img/orbs/6.png",
+            "TheresaResources/img/orbs/7.png",
             "TheresaResources/img/orbs/1.png",
             "TheresaResources/img/orbs/2.png",
             "TheresaResources/img/orbs/3.png",
             "TheresaResources/img/orbs/4.png",
-            "TheresaResources/img/orbs/6.png",
             "TheresaResources/img/orbs/5.png",
-            "TheresaResources/img/orbs/2.png",
-            "TheresaResources/img/orbs/3.png",
-            "TheresaResources/img/orbs/4.png",
             "TheresaResources/img/orbs/6.png",
-            "TheresaResources/img/orbs/5.png",
+            "TheresaResources/img/orbs/7.png",
     };
 
     public static final String[] orbTexturesTheresa = new String[]{
@@ -61,16 +66,21 @@ public class Theresa extends CustomPlayer {
     public static final String VFX = "TheresaResources/img/orbs/vfx.png";
     public static final String IMG_SHOULDER = "TheresaResources/img/charSelect/char_shoulder.png";
     public static final float[] LAYER_SPEED = new float[] {
-            -32.0F,
-            -16.0F,
-            64.0F,
-            32.0F,
-            64.0F,
-            -64.0F,
-            -64.0F,
-            64.0F,
-            -30.0F,
-            30.0F
+            0.2F,
+            0.4F,
+            0.9F,
+            0.95F,
+            1.7F,
+            2.45F
+    };
+
+    public static final float[] LAYER_SCALE = new float[] {
+            0.9F,
+            0.55F,
+            0.55F,
+            0.9F,
+            0.9F,
+            0.9F
     };
 
     public static final float[] LAYER_SPEEDTheresa = new float[] {
@@ -98,7 +108,8 @@ public class Theresa extends CustomPlayer {
     private String skillName = "C1_Skill_4";
 
     public Theresa(String name){
-        super(name, ClassEnum.Theresa_CLASS,orbTexturesTheresa,VFX,LAYER_SPEEDTheresa,null,null);
+        super(name, ClassEnum.Theresa_CLASS,new TheresaEnergyOrb(orbTextures,VFX,LAYER_SPEED,LAYER_SCALE),new G3DJAnimation(null, null));
+
         this.dialogX = this.drawX+ 0.0F* Settings.scale;
         this.dialogY = this.drawY+ 240.0F*Settings.scale;
         this.initializeClass(null,IMG_SHOULDER,IMG_SHOULDER,null,this.getLoadout(),0,-5.0F,260.0F,240.0F,new EnergyManager(ENERGY_PER_TURN));

@@ -18,9 +18,15 @@ public class MakeTempCardInDustAction extends AbstractGameAction {
     private boolean isOtherCardInCenter;
     private boolean sameUUID;
     private boolean canOverMake = false;
+    private boolean notToHand = false;
 
     public MakeTempCardInDustAction setOverMake(){
         this.canOverMake = true;
+        return this;
+    }
+
+    public MakeTempCardInDustAction notToHand(){
+        this.notToHand = true;
         return this;
     }
 
@@ -80,7 +86,19 @@ public class MakeTempCardInDustAction extends AbstractGameAction {
                     dustAmount = empty;
                 }
             }
-            if (handAmount + AbstractDungeon.player.hand.size() > 10) {
+            else {
+                //2025/12/22 新增微尘绝对上限15
+                int empty = Math.max(0, DustPatch.ABSOLUTELY_TOP_LIMIT-DustPatch.dustManager.dustCards.size());
+                if(empty<dustAmount){
+                    handAmount = dustAmount-empty;
+                    dustAmount = empty;
+                }
+            }
+            if(notToHand){
+                discardAmount = handAmount;
+                handAmount = 0;
+            }
+            else if (handAmount + AbstractDungeon.player.hand.size() > 10) {
                 AbstractDungeon.player.createHandIsFullDialog();
                 discardAmount = handAmount + AbstractDungeon.player.hand.size() - 10;
                 handAmount -= discardAmount;

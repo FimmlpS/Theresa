@@ -118,7 +118,7 @@
     "NAME": "Shard of the Untold Kings",
     "FLAVOR": "Many stories remain folded within thoughts, waiting to be told.",
     "DESCRIPTIONS": [
-      "At the end of your turn, for each energy you remain, trigger the #ytheresa:Thread of your #ytheresa:Particles for 1 time (Won't exceed the toplimit of your energy, Reset times of #yMind #ySilk before each trigger)."
+      "At the end of your turn, if you have remain energy, trigger the #ytheresa:Thread of your #ytheresa:Particles for 1 time (Trigger once more if your energy is not less than toplimit, Reset times of #yMind #ySilk before each trigger)."
     ]
   },
   "theresa:GoDudeNoWord": {
