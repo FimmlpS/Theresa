@@ -54,10 +54,10 @@ public class RegisterHelper {
         list.add(new FallFromMemory());
         list.add(new UnseenFuture());
         list.add(new Silk());
-        list.add(new FlowerOcean());
         list.add(new FallMoon());
 
         //UNCOMMON
+        list.add(new FlowerOcean());
         list.add(new ToughHistory());
         list.add(new TimeToDie());
         list.add(new SilkPoem());
@@ -135,12 +135,6 @@ public class RegisterHelper {
         list.add(new Originium());
         list.add(new Stop());
         list.add(new Decide());
-
-        for(AbstractCard c : list){
-            if(c.color == AbstractCard.CardColor.GREEN){
-                Logger.getGlobal().info(c.getClass().getSimpleName());
-            }
-        }
 
 
         return list;

@@ -15,21 +15,23 @@ public class AStory extends AbstractTheresaCard {
 
     public AStory() {
         super(ID,cardStrings.NAME,0,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.COMMON,CardTarget.SELF);
-        baseBlock = block = 3;
+        baseBlock = block = 4;
+        baseMagicNumber = magicNumber = 1;
         exhaust = true;
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new GainBlockAction(abstractPlayer, block));
-        addToBot(new CivilightAction(CardGroup.CardGroupType.HAND,1).setType(false,true,false,false,false).setCopy(1,true,false).setCostDiff(-1));
+        addToBot(new CivilightAction(CardGroup.CardGroupType.HAND,magicNumber).setType(false,true,false,false,false).setCopy(1,true,false).setCostDiff(-1));
     }
 
     @Override
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
-            upgradeBlock(3);
+            upgradeBlock(2);
+            upgradeMagicNumber(1);
         }
     }
 }

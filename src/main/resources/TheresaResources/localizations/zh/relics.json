@@ -150,5 +150,13 @@
     "DESCRIPTIONS": [
       "#r意志不再能替换茧笼/泪水 NL 你打出牌后，触发其拥有的 #ytheresa:丝线 。"
     ]
+  },
+
+  "theresa:HatredTime": {
+    "NAME": "死仇时代的恨意",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "给予所有敌人如下效果，首个回合及之后每2个回合开始时，获得1层恨意。"
+    ]
   }
 }

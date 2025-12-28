@@ -149,5 +149,13 @@
     "DESCRIPTIONS": [
       "Your #rMind can no longer replace the #yCocoon #yCages/ #yTears NL When you play a card, trigger its #ytheresa:Thread ."
     ]
+  },
+
+  "theresa:HatredTime": {
+    "NAME": "Hatred Era",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "Every enemy gains effect: At the start of the first turn and every two turns thereafter, gain 1 Hatred."
+    ]
   }
 }

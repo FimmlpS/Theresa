@@ -23,6 +23,9 @@ public class SkyDisaster extends AbstractTheresaCard {
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,damage,damageTypeForTurn),attackEffect));
         addToBot(new ApplyPowerAction(abstractMonster,abstractPlayer,new DyingPower(abstractMonster,damage),damage));
+        if(!abstractMonster.hasPower(DyingPower.POWER_ID)) {
+            addToBot(new ApplyPowerAction(abstractMonster,abstractPlayer,new DyingPower(abstractMonster,damage),damage));
+        }
     }
 
     @Override

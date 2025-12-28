@@ -18,16 +18,17 @@
     "TEXT": [
       "Choose",
       "Particles to put them into your",
-      "draw pile",
-      "hand",
-      "discard pile",
-      "Exhaustt pile",
-      "to transform them into Particles",
+      " draw pile",
+      " hand",
+      " discard pile",
+      "Exhaust pile",
+      " to transform them into Particles",
       "Choose at most",
-      "cards to Weave them with Cocoon Cages",
-      "cards to discard, and transform them into Particles if they can be",
-      "cards to put in",
-      "cards to Weave them with Mind"
+      " cards to Weave them with Cocoon Cages",
+      " cards to discard, and transform them into Particles if they can be",
+      " cards to put in",
+      " cards to Weave them with Mind",
+      " cards to play"
     ]
   },
   "theresa:TypeSelect": {
@@ -36,7 +37,8 @@
     ],
     "EXTRA_TEXT": [
       "Easy",
-      "Normal"
+      "Normal",
+      "Hard"
     ]
   },
     "theresa:TheBabel": {
@@ -56,7 +58,7 @@
   "theresa:Config": {
     "TEXT": [
       "Enable Shader?",
-      "Mod设置"
+      "Mod Setting"
     ]
   }
 }

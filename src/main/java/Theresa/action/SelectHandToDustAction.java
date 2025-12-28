@@ -52,8 +52,10 @@ public class SelectHandToDustAction extends AbstractGameAction {
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
             for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
                 //2025/12/22 新增微尘绝对上限15
-                if(DustPatch.dustManager.dustCards.size()>=DustPatch.ABSOLUTELY_TOP_LIMIT)
+                if(DustPatch.dustManager.dustCards.size()>=DustPatch.ABSOLUTELY_TOP_LIMIT){
+                    returnCards();
                     return;
+                }
                 DustPatch.dustManager.addCard(c);
             }
             returnCards();

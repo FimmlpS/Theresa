@@ -32,7 +32,7 @@ public class WrongInteraction extends AbstractTheresaCard {
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
-            upgradeDamage(4);
+            upgradeDamage(5);
         }
     }
 }

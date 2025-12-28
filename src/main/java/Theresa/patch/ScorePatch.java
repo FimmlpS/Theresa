@@ -1,5 +1,6 @@
 package Theresa.patch;
 
+import Theresa.screen.TypeSelectScreen;
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -28,6 +29,9 @@ public class ScorePatch {
             }
             if(BabelPatch.NoKilledDead){
                 points[0] += 50;
+            }
+            if(TypeSelectScreen.getType()==2){
+                points[0] += 100;
             }
         }
 
@@ -79,6 +83,9 @@ public class ScorePatch {
             if (BabelPatch.NoKilledDead) {
                 ((ArrayList<GameOverStat>) stats.get(_inst)).add(new GameOverStat(theBabel.DESCRIPTIONS[2], theBabel.DESCRIPTIONS[3], Integer.toString(50)));
             }
+            if(TypeSelectScreen.getType()==2){
+                ((ArrayList<GameOverStat>) stats.get(_inst)).add(new GameOverStat(theBabel.DESCRIPTIONS[4], theBabel.DESCRIPTIONS[5], Integer.toString(100)));
+            }
 
         } catch (Exception e) {
             throw new RuntimeException("Unable to set game over stats.", e);
@@ -94,7 +101,7 @@ public class ScorePatch {
     public static class GameOverStatPatch {
         @SpirePrefixPatch
         public static void Prefix(GameOverStat _inst, SpriteBatch sb, float x, float y) {
-            if(_inst.label != null && (_inst.label.equals(theBabel.DESCRIPTIONS[0])||_inst.label.equals(theBabel.DESCRIPTIONS[2]))){
+            if(_inst.label != null && (_inst.label.equals(theBabel.DESCRIPTIONS[0])||_inst.label.equals(theBabel.DESCRIPTIONS[2])||_inst.label.equals(theBabel.DESCRIPTIONS[4]))){
                 Color current = ReflectionHacks.getPrivate(_inst, GameOverStat.class, "color");
                 GameOverStatField.preColor.set(_inst,current);
                 Color golden = Color.GOLDENROD.cpy();

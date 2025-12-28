@@ -35,6 +35,8 @@ public class Finale extends AbstractTheresaCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        if(!canSilkUse())
+            return;
         addToBot(new TheresaAttackAction(true));
         FinaleEffect f1 = new FinaleEffect(false);
         FinaleEffect f2 = new FinaleEffect(true);
@@ -49,11 +51,7 @@ public class Finale extends AbstractTheresaCard {
         addToBot(new DamageAllEnemiesAction(abstractPlayer,multiDamage,damageTypeForTurn,skillEffect));
     }
 
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if(isTest){
-            return super.canUse(p,m);
-        }
+    private boolean canSilkUse(){
         for(AbstractCard c : AbstractDungeon.player.drawPile.group) {
             if((c.type == CardType.ATTACK ||c.type==CardType.SKILL)&&SilkPatch.SilkCardField.silk.get(c) == null){
                 cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
@@ -71,6 +69,17 @@ public class Finale extends AbstractTheresaCard {
                 cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[2];
                 return false;
             }
+        }
+        return true;
+    }
+
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        if(isTest){
+            return super.canUse(p,m);
+        }
+        if(!canSilkUse()){
+            return false;
         }
         //不判了 恼
 //        for(AbstractCard c : DustPatch.dustManager.dustCards){

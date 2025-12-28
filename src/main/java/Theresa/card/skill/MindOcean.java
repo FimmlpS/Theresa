@@ -14,23 +14,19 @@ public class MindOcean extends AbstractTheresaCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public MindOcean() {
-        super(ID,cardStrings.NAME,2,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.RARE,CardTarget.NONE);
-        baseMagicNumber = magicNumber = 12;
-        //CardModifierManager.addModifier(this,new EternalMod());
-        this.exhaust = true;
+        super(ID,cardStrings.NAME,3,cardStrings.DESCRIPTION,CardType.POWER,CardRarity.RARE,CardTarget.NONE);
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        //addToBot(new MindOceanAction(magicNumber));
-        addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new DiscordPower(abstractPlayer,magicNumber),magicNumber));
+        addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new DiscordPower(abstractPlayer)));
     }
 
     @Override
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
-            upgradeMagicNumber(4);
+            upgradeBaseCost(2);
         }
     }
 }

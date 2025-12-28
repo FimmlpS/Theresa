@@ -130,5 +130,17 @@
       "gone-dust"
     ],
     "DESCRIPTION": "You won't take damage but will get that many #yNecrosis instead ."
+  },
+  {
+    "NAMES": [
+      "hopeless"
+    ],
+    "DESCRIPTION": "Decrease the top limit of your Hopeness by 1. The improvement effect received by Hopeness is halved."
+  },
+  {
+    "NAMES": [
+      "hatrever"
+    ],
+    "DESCRIPTION": "Obtain blight #yHatred #yEra : NL Every enemy gains effect: At the start of the first turn and every two turns thereafter, gain 1 Hatred."
   }
 ]

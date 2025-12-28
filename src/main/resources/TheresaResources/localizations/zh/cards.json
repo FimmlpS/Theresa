@@ -85,11 +85,11 @@
   },
   "theresa:SarkazSee": {
     "NAME": "萨卡兹见证",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL theresa:重现 1张攻击牌。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL theresa:重现 !M! 张攻击牌。 NL 消耗 。"
   },
   "theresa:AStory": {
     "NAME": "萨卡兹叙说",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL theresa:重现 1张技能牌。 NL 消耗 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL theresa:重现 !M! 张技能牌。 NL 消耗 。"
   },
   "theresa:Hardship": {
     "NAME": "苦难盘桓",
@@ -97,7 +97,7 @@
   },
   "theresa:SkyDisaster": {
     "NAME": "天灾",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予等量 theresa:凋亡 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予等量 theresa:凋亡 ，若目标无凋亡则再给予1次。"
   },
   "theresa:WrongInteraction": {
     "NAME": "错位|交互",
@@ -124,17 +124,16 @@
     "NAME": "丝缕",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 [E] 。"
   },
-  "theresa:FlowerOcean": {
-    "NAME": "落零花海",
-    "DESCRIPTION": "你的下 !M! 张牌结算前，敌人受到的伤害会分别提升1~ !M! 点。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 你的下 !M! 张牌结算前，敌人受到的伤害会分别提升1~ !M! 点。"
-  },
   "theresa:FallMoon": {
     "NAME": "落幕",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 向手中放入1张 *停格 。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 向手中放入1张 *停格 。 NL 抽1张牌。"
   },
 
+  "theresa:FlowerOcean": {
+    "NAME": "落零花海",
+    "DESCRIPTION": "获得 [E] 。 NL 若你在回合开始前有能量剩余，获得 [E] 。"
+  },
   "theresa:ToughHistory": {
     "NAME": "苦难",
     "DESCRIPTION": "获得1层 theresa:希望 和 theresa:恨意 ， NL 重复X次。 NL 消耗 。",
@@ -238,7 +237,7 @@
   },
   "theresa:Terminate": {
     "NAME": "终结",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 额外造成手中和 theresa:微尘 中 theresa:丝线 数X倍的伤害。"
+    "DESCRIPTION": "theresa:黯淡 ， 保留 。 NL 造成 !D! 点伤害X次。 NL 对目标打出手中前X张与此牌 theresa:丝线 相同的牌。"
   },
   "theresa:IdealReflection": {
     "NAME": "理想的倒影",
@@ -440,7 +439,7 @@
   },
   "theresa:MindOcean": {
     "NAME": "索拉里斯之海",
-    "DESCRIPTION": "将你受到下 !M! 点伤害改为治疗其来源。 NL 消耗 。"
+    "DESCRIPTION": "*不可叠加 。 NL 主动打出牌后，选择并打出抽牌堆中1张耗能更低的牌。"
   },
   "theresa:MourningInMourning": {
     "NAME": "挽悼",
@@ -469,13 +468,21 @@
     "DESCRIPTION": "虚无 。 NL *抽到时 ：所有敌人获得1点 力量 。",
     "UPGRADE_DESCRIPTION": "虚无 。 NL *抽到时 ：所有敌人获得1点 力量 ，你随机获得1层 虚弱 / 脆弱 。"
   },
+  "theresa:FallAndFall": {
+    "NAME": "陨落",
+    "DESCRIPTION": "无法获得 theresa:丝线 。 NL 战斗开始放入弃牌堆。 NL 消耗 。"
+  },
 
   "theresa:EasyMode": {
     "NAME": "假想演绎",
-    "DESCRIPTION": "*简单难度 NL 提升10点最大生命。 NL 升级初始遗物。"
+    "DESCRIPTION": "*简单难度 NL 提升15点最大生命。"
   },
   "theresa:NormalMode": {
     "NAME": "所谓现实",
     "DESCRIPTION": "*正常难度 NL 这才是你所面对的一切。"
+  },
+  "theresa:HardMode": {
+    "NAME": "巴别塔之章",
+    "DESCRIPTION": "*困难难度 NL theresa:希望渺茫 。 NL theresa:恨火蔓延 。"
   }
 }

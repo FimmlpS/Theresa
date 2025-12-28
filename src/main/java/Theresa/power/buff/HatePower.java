@@ -37,7 +37,6 @@ public class HatePower extends AbstractTheresaPower {
         if(isPlayer){
             AbstractPower hope = this.owner.getPower(HopePower.POWER_ID);
             if(hope != null && this.amount > hope.amount) {
-                this.flash();
                 if(hope.amount<=1)
                     addToBot(new RemoveSpecificPowerAction(owner, owner, HopePower.POWER_ID));
                 else
@@ -52,7 +51,6 @@ public class HatePower extends AbstractTheresaPower {
         if(this.owner instanceof AbstractMonster){
             AbstractPower hope = this.owner.getPower(HopePower.POWER_ID);
             if(hope != null && this.amount > hope.amount) {
-                this.flash();
                 if(hope.amount<=1)
                     addToBot(new RemoveSpecificPowerAction(owner, owner, HopePower.POWER_ID));
                 else

@@ -4,6 +4,7 @@ import Theresa.patch.DustPatch;
 import Theresa.patch.SilkPatch;
 import Theresa.power.AbstractTheresaPower;
 import Theresa.relic.TheRecall;
+import Theresa.screen.TypeSelectScreen;
 import Theresa.silk.AbstractSilk;
 import Theresa.silk.MindSilk;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -103,6 +104,9 @@ public class HopePower extends AbstractTheresaPower {
         }
         if(AbstractDungeon.player.hasRelic(TheRecall.ID))
             ex+=2;
+        //困难难度
+        if(TypeSelectScreen.getType()==2)
+            ex/=2;
         if(ex!=extraMax){
             extraMax = ex;
             updateDescription();
@@ -112,6 +116,9 @@ public class HopePower extends AbstractTheresaPower {
     @Override
     public void updateDescription() {
         int tmp = extraMax+initialMax;
+        //困难难度
+        if(TypeSelectScreen.getType()==2)
+            tmp--;
         int tmp2 = amount+extraMax;
         this.description = powerStrings.DESCRIPTIONS[0] + amount + powerStrings.DESCRIPTIONS[1] + tmp + powerStrings.DESCRIPTIONS[2];
     }

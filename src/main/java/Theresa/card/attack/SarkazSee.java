@@ -16,21 +16,23 @@ public class SarkazSee extends AbstractTheresaCard {
 
     public SarkazSee() {
         super(ID,cardStrings.NAME,0,cardStrings.DESCRIPTION,CardType.ATTACK,CardRarity.COMMON,CardTarget.ENEMY);
-        baseDamage = damage = 3;
+        baseDamage = damage = 4;
+        baseMagicNumber = magicNumber = 1;
         exhaust = true;
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,damage,damageTypeForTurn),attackEffect));
-        addToBot(new CivilightAction(CardGroup.CardGroupType.HAND,1).setType(true,false,false,false,false).setCopy(1,true,false).setCostDiff(-1));
+        addToBot(new CivilightAction(CardGroup.CardGroupType.HAND,magicNumber).setType(true,false,false,false,false).setCopy(1,true,false).setCostDiff(-1));
     }
 
     @Override
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
-            upgradeDamage(3);
+            upgradeDamage(2);
+            upgradeMagicNumber(1);
         }
     }
 }

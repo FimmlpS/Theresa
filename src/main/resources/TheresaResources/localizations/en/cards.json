@@ -85,11 +85,11 @@
   },
   "theresa:SarkazSee": {
     "NAME": "Sarkaz Witness",
-    "DESCRIPTION": "Deal !D! damage. NL theresa:Reproduce 1 Attack. NL Exhaust ."
+    "DESCRIPTION": "Deal !D! damage. NL theresa:Reproduce !M! Attack. NL Exhaust ."
   },
   "theresa:AStory": {
     "NAME": "Sarkaz Illustration",
-    "DESCRIPTION": "Gain !B! Block . NL theresa:Reproduce 1 Skill. NL Exhaust ."
+    "DESCRIPTION": "Gain !B! Block . NL theresa:Reproduce !M! Skill. NL Exhaust ."
   },
   "theresa:Hardship": {
     "NAME": "Anguish Hangs O'er",
@@ -97,7 +97,7 @@
   },
   "theresa:SkyDisaster": {
     "NAME": "Catastrophe",
-    "DESCRIPTION": "Deal !D! damage. NL Apply that many  theresa:Necrosis ."
+    "DESCRIPTION": "Deal !D! damage. NL Apply that many theresa:Necrosis , if target has no Necrosis, apply once more."
   },
   "theresa:WrongInteraction": {
     "NAME": "Interlace | React",
@@ -124,17 +124,16 @@
     "NAME": "Silk",
     "DESCRIPTION": "Gain !B! Block . NL Gain [E] ."
   },
-  "theresa:FlowerOcean": {
-    "NAME": "Sea of Flower",
-    "DESCRIPTION": " Before the Settlement of your next 3 cards, the damage your enemies take will increase by 1/2/3 .",
-    "UPGRADE_DESCRIPTION": "Retain . NL Before the Settlement of your next 3 cards, the damage your enemies take will increase by 1/2/3."
-  },
   "theresa:FallMoon": {
     "NAME": "Lower The Curtain",
     "DESCRIPTION": "Gain !B! Block. NL Add a *Termination to your hand.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add a *Termination to your hand. NL Draw 1 card."
   },
 
+  "theresa:FlowerOcean": {
+    "NAME": "Sea of Flower",
+    "DESCRIPTION": "Gain [E] . NL Before the start of your turn, if you have energy remained, gain [E] ."
+  },
   "theresa:ToughHistory": {
     "NAME": "Suffering",
     "DESCRIPTION": "Gain 1 theresa:Hopeness and theresa:Hatred for X times. NL Exhaust .",
@@ -238,7 +237,7 @@
   },
   "theresa:Terminate": {
     "NAME": "Eliminate",
-    "DESCRIPTION": "Deal !D! damage !M! 次. NL Increase the damage to X times of the number of cards that have theresa:Thread in your hand and theresa:Particles pile."
+    "DESCRIPTION": "theresa:Dim, Retain. NL Deal !D! damage X times. NL Play X cards in your hand that have theresa:Thread as same as this card."
   },
   "theresa:IdealReflection": {
     "NAME": "Reflection of Ideals",
@@ -439,7 +438,7 @@
   },
   "theresa:MindOcean": {
     "NAME": "Ocean of Solaris",
-    "DESCRIPTION": "Prevent the next !M! damage you take, and heal the source of damage that many instead. NL Exhaust ."
+    "DESCRIPTION": "*This *Power *cannot *stack. NL After you play a card NOT inAuto, select and play a card in draw pile with lower cost."
   },
   "theresa:MourningInMourning": {
     "NAME": "Mourning",
@@ -463,18 +462,26 @@
     "NAME": "Termination",
     "DESCRIPTION": " Unplayable . NL The *Thread of this card will effect !M! times."
   },
+  "theresa:Decide": {
+    "NAME": "Relentless",
+    "DESCRIPTION": "Ethereal . NL *When *drawn , all of the enemies gain 1 Strength .",
+    "UPGRADE_DESCRIPTION": "Ethereal . NL *When *drawn , all of the enemies gain 1 Strength , you randomly gain 1 Weak or 1 Frail ."
+  },
+  "theresa:FallAndFall": {
+    "NAME": "陨落",
+    "DESCRIPTION": "无法获得 theresa:丝线 。 NL 战斗开始放入弃牌堆。 NL 消耗 。"
+  },
 
   "theresa:EasyMode": {
     "NAME": "Hypothesis Deduction",
-    "DESCRIPTION": "*Easy *Mode NL Increase your Max HP by 10. NL Upgrade your Starter Relic."
+    "DESCRIPTION": "*Easy *Mode NL Increase your Max HP by 15. NL Upgrade your Starter Relic."
   },
   "theresa:NormalMode": {
     "NAME": "So-Called Fact",
     "DESCRIPTION": "*Normal *Mode NL It is the fact what you have to face."
   },
-    "theresa:Decide": {
-    "NAME": "Relentless",
-    "DESCRIPTION": "Ethereal . NL *When *drawn , all of the enemies gain 1 Strength .",
-    "UPGRADE_DESCRIPTION": "Ethereal . NL *When *drawn , all of the enemies gain 1 Strength , you randomly gain 1 Weak or 1 Frail ."
+  "theresa:HardMode": {
+    "NAME": "Chapter of Babel",
+    "DESCRIPTION": "*Hard *Mode NL theresa:Hopeless. NL theresa:Hatrever."
   }
 }

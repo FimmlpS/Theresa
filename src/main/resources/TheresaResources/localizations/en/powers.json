@@ -126,9 +126,8 @@
   "theresa:FlowerOceanPower": {
     "NAME": "Petal",
     "DESCRIPTIONS": [
-      "Before the Settlement of your next #b",
-      " cards, the damage your enemies take will increase by #b",
-      " . For each stack this effect lose, increase the damage by 1."
+      "Before the start of your turn, for each energy you have (at most #b",
+      " ), gain 1 energy."
     ]
   },
   "theresa:FixLifePower": {
@@ -161,7 +160,7 @@
   "theresa:HeroAndKingPower": {
     "NAME": "The Hero and the King",
     "DESCRIPTIONS": [
-      "When you play the card containing \"#gHopeness / #rHatred\" , gain #b",
+      "When you play the card containing #gHopeness / #rHatred , gain #b",
       " #gHopeness / #rHatred .",
       "Hopeness",
       "Hatred"
@@ -231,6 +230,13 @@
     "NAME": "Heavy Strike",
     "DESCRIPTIONS": [
       "Increase the damage your next attcak can deal to #b200% ."
+    ]
+  },
+  "theresa:HatredTimePower": {
+    "NAME": "Hatrever",
+    "DESCRIPTIONS": [
+      "At the start of #b",
+      " turn thereafter, gain 1 #rHatred."
     ]
   }
 }

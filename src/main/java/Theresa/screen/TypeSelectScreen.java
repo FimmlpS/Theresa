@@ -1,6 +1,7 @@
 package Theresa.screen;
 
 import Theresa.card.special.EasyMode;
+import Theresa.card.special.HardMode;
 import Theresa.card.special.NormalMode;
 import Theresa.modcore.TheresaMod;
 import Theresa.patch.ClassEnum;
@@ -173,6 +174,7 @@ public class TypeSelectScreen {
         list = new ArrayList<>();
         list.add(new EasyMode());
         list.add(new NormalMode());
+        list.add(new HardMode());
         Inst = new TypeSelectScreen();
     }
 }

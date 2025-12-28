@@ -113,8 +113,7 @@
   "theresa:DiscordPower": {
     "NAME": "索拉里斯之海",
     "DESCRIPTIONS": [
-      "将你受到的下 #b",
-      " 点伤害改为治疗伤害来源（若无来源则随机选择敌人）。"
+      "主动打出牌后，选择并打出抽牌堆中1张耗能更低的牌。"
     ]
   },
   "theresa:DisasterPower": {
@@ -126,9 +125,8 @@
   "theresa:FlowerOceanPower": {
     "NAME": "落零花瓣",
     "DESCRIPTIONS": [
-      "你的下 #b",
-      " 张牌结算前，敌人受到的伤害提升 #b",
-      " 点。此效果每减少1层，增加1点伤害。"
+      "你在回合开始前每剩余1点能量（至多 #b",
+      " 点），就获得1点能量。"
     ]
   },
   "theresa:FixLifePower": {
@@ -161,8 +159,8 @@
   "theresa:HeroAndKingPower": {
     "NAME": "英雄与魔王",
     "DESCRIPTIONS": [
-      "在你打出描述中含有 #r希望 / #g恨意 的牌后，获得 #b",
-      " 层 #r希望 / #g恨意 。",
+      "在你打出描述中含有 #g希望 / #r恨意 的牌后，获得 #b",
+      " 层 #g希望 / #r恨意 。",
       "希望",
       "恨意"
     ]
@@ -191,6 +189,13 @@
     "NAME": "强击",
     "DESCRIPTIONS": [
       "下次攻击伤害提升至 #b200％ 。"
+    ]
+  },
+  "theresa:HatredTimePower": {
+    "NAME": "恨火蔓延",
+    "DESCRIPTIONS": [
+      "在下 #b",
+      " 个回合开始时，获得1层 #r恨意 。"
     ]
   },
 
