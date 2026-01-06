@@ -60,12 +60,13 @@
   },
   "theresa:InFire": {
     "NAME": "Kazdel in War",
-    "DESCRIPTION": "theresa:Dim . NL Apply 1 theresa:Hatred . NL Gain !M! theresa:Hatred .",
-    "UPGRADE_DESCRIPTION": "theresa:Dim . NL Apply 2 theresa:Hatred . NL Gain !M! theresa:Hatred ."
+    "DESCRIPTION": "In this turn, every time you play an Attack, gain 1 theresa:Hatred.",
+    "UPGRADE_DESCRIPTION": "Gain !M! theresa:Hatred. NL In this turn, every time you play an Attack, gain 1 theresa:Hatred."
   },
   "theresa:WhereIsHome": {
     "NAME": "As Refugee",
-    "DESCRIPTION": "theresa:Dim . NL Deal !D! damage. NL Apply !M! theresa:Hatred to all entities."
+    "DESCRIPTION": "Deal !D! damage. NL If NOT played in auto, Apply !M! theresa:Hatred to all entities.",
+    "FLAVOR": "When the era is #yhatrever, The longing for home will devour us."
   },
   "theresa:LittleTailor": {
     "NAME": "Little Tailor",
@@ -73,7 +74,8 @@
   },
   "theresa:Babel": {
     "NAME": "Babel",
-    "DESCRIPTION": "Gain !B! Block . NL Apply !M! theresa:Hopeness to all entities."
+    "DESCRIPTION": "Gain !B! Block . NL Apply !M! theresa:Hopeness to all entities.",
+    "FLAVOR": "Even though the era is #yhopeless, We are still building a home for Terra."
   },
   "theresa:WeaveSpread": {
     "NAME": "Weave Spreading",
@@ -173,7 +175,7 @@
   },
   "theresa:ThereItIs": {
     "NAME": "There ■ is",
-    "DESCRIPTION": "Deal !D! damage. NL *When *this *card *is * in *your *hand , increase the damage by !M! for each time the place of this card change."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL For each stat the theresa:Thread of this card has, deal 1 more time."
   },
   "theresa:ImperialCourts": {
     "NAME": "Royal Court's Call",
@@ -241,8 +243,7 @@
   },
   "theresa:IdealReflection": {
     "NAME": "Reflection of Ideals",
-    "DESCRIPTION": "theresa:Dim . NL theresa:Linger X times.",
-    "UPGRADE_DESCRIPTION": "theresa:Dim . NL Choose at most X theresa:Particles to put them to your hand. NL theresa:Linger X times."
+    "DESCRIPTION": "Gain !B! Block. NL Discard left !M! theresa:Particles and copy them into Particles, apply Exhaust to the copies."
   },
   "theresa:Starter": {
     "NAME": "Starter",
@@ -287,7 +288,7 @@
   },
   "theresa:FromRose": {
     "NAME": "Rose Riverside's Message",
-    "DESCRIPTION": "Lose 6 theresa:Hopeness . NL Then gian 1 theresa:Hopeness !M! times. NL Shuffled into draw pile after being played."
+    "DESCRIPTION": "Shuffle !M! special *Gift into draw pile. NL Exhaust."
   },
   "theresa:FutureStop": {
     "NAME": "Terminated Future",
@@ -371,12 +372,15 @@
   },
   "theresa:Finale": {
     "NAME": "Shatter Melody",
-    "DESCRIPTION": "theresa:Dim . NL Can only be played if all of your Skill and Attack have theresa:Thread . NL Deal !D! damage to all enemies.",
+    "DESCRIPTION": "theresa:Dim . NL Can only be played if amount of theresa:Threaded cards is not less than 24. NL Deal !D! damage to all enemies.",
     "FLAVOR": "The End……has come.",
     "EXTENDED_DESCRIPTION": [
       "My draw pile hasn't been Weaved……",
       "My hand hasn't been Weaved……",
-      "My discard pile hasn't been Weaved……"
+      "My discard pile hasn't been Weaved……",
+      "It's not the finale yet……",
+      "Current Amount: ",
+      " /24"
     ]
   },
   "theresa:EternalDust": {
@@ -452,7 +456,11 @@
 
   "theresa:TheGift": {
     "NAME": "Gift",
-    "DESCRIPTION": " Unplayable . NL When drawn into your hand, gain 1 theresa:Hatred , increase the damage of *Pact:Duq'arael by !M! , and draw1 card."
+    "DESCRIPTION": " Unplayable . NL When drawn into your hand, gain 1 theresa:Hatred , increase the damage of *Pact:Duq'arael by !M! , and draw 1 card.",
+    "EXTENDED_DESCRIPTION": [
+      "[Rose]Gift",
+      " Unplayable . NL When drawn into your hand, gain 1 theresa:Hopeness , increase the damage of *Pact:Duq'arael by !M! , and draw 1 card."
+    ]
   },
   "theresa:Originium": {
     "NAME": "\"Originium\"",

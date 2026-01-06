@@ -1,8 +1,10 @@
 package Theresa.card.skill;
 
 import Theresa.card.AbstractTheresaCard;
+import Theresa.card.status.TheGift;
 import Theresa.power.buff.HopePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,17 +16,17 @@ public class FromRose extends AbstractTheresaCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public FromRose() {
-        super(ID,cardStrings.NAME,1,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.UNCOMMON,CardTarget.SELF);
-        shuffleBackIntoDrawPile = true;
-        baseMagicNumber = magicNumber = 3;
+        super(ID,cardStrings.NAME,1,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.UNCOMMON,CardTarget.NONE);
+        TheGift gift = new TheGift();
+        gift.setSpecial();
+        cardsToPreview = gift;
+        this.baseMagicNumber = magicNumber = 2;
+        this.exhaust = true;
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new ReducePowerAction(abstractPlayer,abstractPlayer, HopePower.POWER_ID,6));
-        for(int i = 0; i < magicNumber; i++) {
-            addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new HopePower(abstractPlayer,1),1));
-        }
+        addToBot(new MakeTempCardInDrawPileAction(cardsToPreview,magicNumber,true,true));
     }
 
     @Override

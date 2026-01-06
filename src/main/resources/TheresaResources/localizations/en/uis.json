@@ -58,7 +58,8 @@
   "theresa:Config": {
     "TEXT": [
       "Enable Shader?",
-      "Mod Setting"
+      "Mod Setting",
+      "Ban Hidden Ending?"
     ]
   }
 }

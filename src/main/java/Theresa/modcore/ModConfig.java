@@ -18,17 +18,21 @@ import java.util.Properties;
 
 public class ModConfig {
     private static final String ENABLE_SHADER = "theresa:ENABLE_SHADER";
+    private static final String BAN_ENDING = "theresa:BAN_ENDING";
     public static boolean enableShader = true;
+    public static boolean banEnding = false;
     public static SpireConfig config = null;
     private static Properties defaultSetting = new Properties();
     private static ModPanel settingsPanel;
 
     public static void initModSettings(){
         defaultSetting.setProperty(ENABLE_SHADER, String.valueOf(enableShader));
+        defaultSetting.setProperty(BAN_ENDING, String.valueOf(banEnding));
         try {
             config = new SpireConfig("Theresa_FimmlpS","Common",defaultSetting);
             config.load();
             enableShader = config.getBool(ENABLE_SHADER);
+            banEnding = config.getBool(BAN_ENDING);
         }
         catch (Exception e){
             TheresaMod.logSomething("Init Config Failed" + e.getLocalizedMessage());
@@ -61,6 +65,18 @@ public class ModConfig {
             }
         });
 
+        ModLabeledToggleButton btn2 = new ModLabeledToggleButton(uiStrings.TEXT[2],350F,560F, Settings.CREAM_COLOR, FontHelper.charDescFont, banEnding,settingsPanel, modLabel -> {
+        },modToggleButton -> {
+            banEnding = modToggleButton.enabled;
+            config.setString(BAN_ENDING, String.valueOf(banEnding));
+            try {
+                config.save();
+            } catch (IOException e) {
+                TheresaMod.logSomething("save config credit failed" + e.getLocalizedMessage());
+            }
+        });
+
         settingsPanel.addUIElement(btn);
+        settingsPanel.addUIElement(btn2);
     }
 }

@@ -95,11 +95,6 @@ public class SilkPatch {
             if(AbstractDungeon.actionManager != null && r instanceof TheEnd){
                 ((TheEnd) r).onTriggerSilk(card);
             }
-
-            r = AbstractDungeon.player.getRelic(GoDudeNoWord.ID);
-            if(AbstractDungeon.actionManager != null && r instanceof GoDudeNoWord){
-                r.onTrigger();
-            }
         }
     }
 

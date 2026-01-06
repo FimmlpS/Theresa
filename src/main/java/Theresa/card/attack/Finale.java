@@ -8,6 +8,9 @@ import Theresa.patch.DustPatch;
 import Theresa.patch.OtherEnum;
 import Theresa.patch.SilkPatch;
 import Theresa.silk.MemorySilk;
+import basemod.ReflectionHacks;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -15,6 +18,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
@@ -24,6 +28,7 @@ public class Finale extends AbstractTheresaCard {
     public static final String ID = "theresa:Finale";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static boolean isTest = false;
+    int totalSize = -1;
 
     public Finale() {
         super(ID,cardStrings.NAME,0,cardStrings.DESCRIPTION,CardType.ATTACK,CardRarity.RARE,CardTarget.ALL_ENEMY);
@@ -52,25 +57,45 @@ public class Finale extends AbstractTheresaCard {
     }
 
     private boolean canSilkUse(){
+        int amount = 0;
         for(AbstractCard c : AbstractDungeon.player.drawPile.group) {
-            if((c.type == CardType.ATTACK ||c.type==CardType.SKILL)&&SilkPatch.SilkCardField.silk.get(c) == null){
-                cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
-                return false;
+            if(SilkPatch.SilkCardField.silk.get(c)!=null){
+                amount++;
             }
         }
         for(AbstractCard c : AbstractDungeon.player.discardPile.group) {
-            if((c.type == CardType.ATTACK ||c.type==CardType.SKILL)&&SilkPatch.SilkCardField.silk.get(c) == null){
-                cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[1];
-                return false;
+            if(SilkPatch.SilkCardField.silk.get(c)!=null){
+                amount++;
             }
         }
         for(AbstractCard c : AbstractDungeon.player.hand.group) {
-            if((c.type == CardType.ATTACK ||c.type==CardType.SKILL)&&SilkPatch.SilkCardField.silk.get(c) == null){
-                cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[2];
-                return false;
+            if(SilkPatch.SilkCardField.silk.get(c)!=null){
+                amount++;
             }
         }
+        for(AbstractCard c : DustPatch.dustManager.dustCards) {
+            if(SilkPatch.SilkCardField.silk.get(c)!=null){
+                amount++;
+            }
+        }
+        totalSize = amount;
+        if(amount<24){
+            cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[3];
+            return false;
+        }
         return true;
+    }
+
+    @Override
+    protected void renderTitle(SpriteBatch sb) {
+        super.renderTitle(sb);
+        if(AbstractDungeon.player == null || totalSize<0)
+            return;
+        String builder = cardStrings.EXTENDED_DESCRIPTION[4] + totalSize + cardStrings.EXTENDED_DESCRIPTION[5];
+        Color color = Settings.LIGHT_YELLOW_COLOR.cpy();
+        Color renderColor = ReflectionHacks.getPrivate(this, AbstractCard.class,"renderColor");
+        color.a = renderColor.a;
+        FontHelper.renderRotatedText(sb, FontHelper.cardTitleFont, builder, this.current_x, this.current_y, 0.0F, 235.0F * this.drawScale * Settings.scale, this.angle, false, color);
     }
 
     @Override
@@ -81,11 +106,6 @@ public class Finale extends AbstractTheresaCard {
         if(!canSilkUse()){
             return false;
         }
-        //不判了 恼
-//        for(AbstractCard c : DustPatch.dustManager.dustCards){
-//            if((c.type == CardType.ATTACK ||c.type==CardType.SKILL)&&SilkPatch.SilkCardField.silk.get(c) == null)
-//                return false;
-//        }
         return super.canUse(p, m);
     }
 

@@ -32,7 +32,8 @@
   },
   {
     "NAMES": [
-      "thread"
+      "thread",
+      "threaded"
     ],
     "DESCRIPTION": "Will give additional effect to the card. NL At the end of your turn, the cards with #yThread will spread their #yThread to #bAdjacent cards."
   },

@@ -7,8 +7,11 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 public class HatredTimePower extends AbstractTheresaPower {
     public static final String POWER_ID = "theresa:HatredTimePower";
 
+    public int showedAmount = 1;
+
     public HatredTimePower(AbstractCreature owner) {
         super(POWER_ID, owner, 1);
+        this.showedAmount = 1;
         setAmountDescription();
         loadRegion("firebreathing");
     }
@@ -22,5 +25,10 @@ public class HatredTimePower extends AbstractTheresaPower {
             addToBot(new ApplyPowerAction(owner,owner,new HatePower(owner,1),1));
         }
         updateDescription();
+    }
+
+    @Override
+    public void atEndOfTurn(boolean isPlayer) {
+        this.showedAmount = amount;
     }
 }

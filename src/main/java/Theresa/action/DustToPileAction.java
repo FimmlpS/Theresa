@@ -1,6 +1,8 @@
 package Theresa.action;
 
 import Theresa.patch.DustPatch;
+import basemod.cardmods.ExhaustMod;
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -25,6 +27,13 @@ public class DustToPileAction extends AbstractGameAction {
         return this;
     }
 
+    public DustToPileAction idealReflection(){
+        this.idealReflection = true;
+        return this;
+    }
+
+
+    boolean idealReflection = false;
     boolean prev = false;
     boolean random = false;
     AbstractCard card;
@@ -67,6 +76,11 @@ public class DustToPileAction extends AbstractGameAction {
             else if(gType == CardGroup.CardGroupType.EXHAUST_PILE){
                 DustPatch.dustManager.removeCard(card);
                 tmp.moveToExhaustPile(card);
+            }
+            if(idealReflection){
+                AbstractCard copy = card.makeStatEquivalentCopy();
+                CardModifierManager.addModifier(copy,new ExhaustMod());
+                addToBot(new MakeTempCardInDustAction(copy,1,true));
             }
         }
         this.tickDuration();

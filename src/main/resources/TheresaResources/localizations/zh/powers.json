@@ -171,6 +171,13 @@
       "直到回合结束，随机化你抽到牌的 #b回合 耗能。"
     ]
   },
+  "theresa:InFirePower": {
+    "NAME": "战火之中",
+    "DESCRIPTIONS": [
+      "本回合你每打出1张攻击牌就获得 #b",
+      " 层恨意。"
+    ]
+  },
 
   "theresa:PromiseDiePower": {
     "NAME": "誓死",

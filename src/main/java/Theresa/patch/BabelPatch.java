@@ -1,6 +1,7 @@
 package Theresa.patch;
 
 import Theresa.dungeon.TheBabel;
+import Theresa.modcore.ModConfig;
 import Theresa.modcore.TheresaMod;
 import Theresa.relic.KnownRelic;
 import Theresa.relic.UnknownRelic;
@@ -43,6 +44,8 @@ public class BabelPatch {
     public static boolean NoKilledDead = false;
 
     public static boolean enableExtra(){
+        if(ModConfig.banEnding)
+            return false;
         return EnterBabel && !EnteredBabel;
     }
 
@@ -211,7 +214,7 @@ public class BabelPatch {
     public static class TrueVictoryPatch{
         @SpirePrefixPatch
         public static SpireReturn<Void> Prefix(TrueVictoryRoom _inst){
-            if(EnteredBabel)
+            if(EnteredBabel || ModConfig.banEnding)
                 return SpireReturn.Continue();
             //todo
             boolean canEnter = false;
@@ -256,7 +259,7 @@ public class BabelPatch {
     public static class TreasureBossPatch{
         @SpirePostfixPatch
         public static String Postfix(String _ret,TreasureRoomBoss _inst){
-            if(EnteredBabel)
+            if(EnteredBabel || ModConfig.banEnding)
                 return _ret;
             if(EnterBabel&&!AbstractDungeon.id.equals(TheBabel.ID)){
                 return TheBabel.ID;
@@ -270,7 +273,7 @@ public class BabelPatch {
     public static class ProceedButtonTPatch{
         @SpirePostfixPatch
         public static void Postfix(ProceedButton _inst){
-            if(EnteredBabel)
+            if(EnteredBabel || ModConfig.banEnding)
                 return;
             if(EnterBabel&&!AbstractDungeon.id.equals(TheBabel.ID)){
                 CardCrawlGame.nextDungeon = TheBabel.ID;

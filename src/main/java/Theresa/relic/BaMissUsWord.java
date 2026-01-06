@@ -5,10 +5,12 @@ import Theresa.interfaces.LockedIt;
 import Theresa.power.buff.HatePower;
 import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class BaMissUsWord extends CustomRelic {
     public static final String ID = "theresa:BaMissUsWord";
@@ -20,10 +22,20 @@ public class BaMissUsWord extends CustomRelic {
     }
 
     @Override
-    public void onUseCard(AbstractCard targetCard, UseCardAction useCardAction) {
-        if(targetCard.type == AbstractCard.CardType.ATTACK){
-            this.flash();
-            addToBot(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new HatePower(AbstractDungeon.player,1),1));
+    public void atBattleStart() {
+        this.flash();
+        addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new HatePower(AbstractDungeon.player,6),6));
+    }
+
+    @Override
+    public void onTrigger() {
+        this.flash();
+        addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        for(AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            if(!m.isDeadOrEscaped()){
+                addToBot(new ApplyPowerAction(m,AbstractDungeon.player,new HatePower(m,1),1));
+            }
         }
     }
 

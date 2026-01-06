@@ -6,12 +6,14 @@ import Theresa.modcore.TheresaMod;
 import Theresa.orb.TheresaEnergyOrb;
 import Theresa.patch.ClassEnum;
 import Theresa.patch.ColorEnum;
+import Theresa.patch.DustPatch;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.G3DJAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -22,7 +24,10 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 
 import java.util.ArrayList;
@@ -269,6 +274,37 @@ public class Theresa extends CustomPlayer {
         int trueDamage = currentHealth - thisHealth;
         if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && trueDamage > 0 && this.isDead) {
             this.playDeathAnimation();
+        }
+    }
+
+    //展示微尘数量
+
+
+    @Override
+    public void renderPowerTips(SpriteBatch sb) {
+        ArrayList<PowerTip> tips = new ArrayList<>();
+        if(DustPatch.dustManager.dustUpLimit>0){
+            tips.add(new PowerTip(characterStrings.TEXT[3],characterStrings.TEXT[4]+DustPatch.dustManager.dustUpLimit+characterStrings.TEXT[5]));
+        }
+
+        if (!this.stance.ID.equals("Neutral")) {
+            tips.add(new PowerTip(this.stance.name, this.stance.description));
+        }
+
+        for(AbstractPower p : this.powers) {
+            if (p.region48 != null) {
+                tips.add(new PowerTip(p.name, p.description, p.region48));
+            } else {
+                tips.add(new PowerTip(p.name, p.description, p.img));
+            }
+        }
+
+        if (!tips.isEmpty()) {
+            if (this.hb.cX + this.hb.width / 2.0F < TIP_X_THRESHOLD) {
+                TipHelper.queuePowerTips(this.hb.cX + this.hb.width / 2.0F + TIP_OFFSET_R_X, this.hb.cY + TipHelper.calculateAdditionalOffset(tips, this.hb.cY), tips);
+            } else {
+                TipHelper.queuePowerTips(this.hb.cX - this.hb.width / 2.0F + TIP_OFFSET_L_X, this.hb.cY + TipHelper.calculateAdditionalOffset(tips, this.hb.cY), tips);
+            }
         }
     }
 

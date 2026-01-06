@@ -172,6 +172,13 @@
       "Until end of your turn, randomize the #bturn cost of drawn cards."
     ]
   },
+  "theresa:InFirePower": {
+    "NAME": "In Fire",
+    "DESCRIPTIONS": [
+      "In this turn, every time you play an Attack, gain #b",
+      " Hatred."
+    ]
+  },
 
   "theresa:NormalSilk": {
     "NAME": "theresa:Cocoon Cages",

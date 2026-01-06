@@ -1,5 +1,6 @@
 package Theresa.patch;
 
+import Theresa.character.Theresa;
 import Theresa.screen.TypeSelectScreen;
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
@@ -7,6 +8,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.ScoreBonusStrings;
 import com.megacrit.cardcrawl.screens.DeathScreen;
 import com.megacrit.cardcrawl.screens.GameOverScreen;
@@ -83,8 +85,10 @@ public class ScorePatch {
             if (BabelPatch.NoKilledDead) {
                 ((ArrayList<GameOverStat>) stats.get(_inst)).add(new GameOverStat(theBabel.DESCRIPTIONS[2], theBabel.DESCRIPTIONS[3], Integer.toString(50)));
             }
-            if(TypeSelectScreen.getType()==2){
-                ((ArrayList<GameOverStat>) stats.get(_inst)).add(new GameOverStat(theBabel.DESCRIPTIONS[4], theBabel.DESCRIPTIONS[5], Integer.toString(100)));
+            if((AbstractDungeon.player instanceof Theresa) && (_inst instanceof VictoryScreen)){
+                if(TypeSelectScreen.getType()==2){
+                    ((ArrayList<GameOverStat>) stats.get(_inst)).add(new GameOverStat(theBabel.DESCRIPTIONS[4], theBabel.DESCRIPTIONS[5], Integer.toString(100)));
+                }
             }
 
         } catch (Exception e) {

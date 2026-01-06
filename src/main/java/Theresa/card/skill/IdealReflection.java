@@ -1,8 +1,13 @@
 package Theresa.card.skill;
 
+import Theresa.action.DustAction;
+import Theresa.action.DustToPileAction;
 import Theresa.action.IdealReflectionAction;
+import Theresa.action.ResetIdealAction;
 import Theresa.card.AbstractTheresaCard;
 import Theresa.patch.OtherEnum;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -13,21 +18,24 @@ public class IdealReflection extends AbstractTheresaCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public IdealReflection() {
-        super(ID,cardStrings.NAME,-1,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.UNCOMMON,CardTarget.NONE);
-        this.tags.add(OtherEnum.Theresa_Darkness);
+        super(ID,cardStrings.NAME,1,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.UNCOMMON,CardTarget.SELF);
+        baseBlock = block = 8;
+        baseMagicNumber = magicNumber = 1;
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new IdealReflectionAction(abstractPlayer,freeToPlayOnce,energyOnUse,upgraded));
+        addToBot(new GainBlockAction(abstractPlayer, block));
+        for(int i =0;i<magicNumber;i++)
+            addToBot(new DustToPileAction(null, CardGroup.CardGroupType.DISCARD_PILE).setPrev().idealReflection());
     }
 
     @Override
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
-            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBlock(1);
+            upgradeMagicNumber(1);
         }
     }
 }

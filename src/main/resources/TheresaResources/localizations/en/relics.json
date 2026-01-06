@@ -125,7 +125,7 @@
     "NAME": "Gul'dul's Silence",
     "FLAVOR": "He stood at Kazdel's highest point and turned to stone. Until the day the Sarkaz forgot their King, and pushed the statue down with their own hands.",
     "DESCRIPTIONS": [
-      "At the start of the combat, gain #b6 #yPlated #yArmor . NL Gain additional #b3 #yPlated #yArmor for each 10 cards your #ytheresa:Thread spread to."
+      "At the start of the combat, gain #b6 #yPlated #yArmor . NL When you lost HP, gain 2 more. At end of each combat, every 2 Plated Armor heal you with 1 HP."
     ]
   },
   "theresa:QuiZaTueStaWord": {
@@ -140,14 +140,16 @@
     "NAME": "Balor'sača's Arrogance",
     "FLAVOR": "This land belongs to the Diablo, and there is no need for others. As their King, Balor'sača absolutely cannot allow the crown to fall on the head of another.",
     "DESCRIPTIONS": [
-      "For each time you play an Attack, gain 1 #ytheresa:Hatred ."
+      "When an enemy gains #ytheresa:Hatred, deal damage to all enemies instead of to you. NL Gain 6 Hatred at start of combat. At the end of your turn, if your Hatred is more than Hopeness, apply 1 Hatred to all enemies."
     ]
   },
   "theresa:IreShyWord": {
     "NAME": "Yliš's Ravings",
     "FLAVOR": "He was no longer his humble self, and lost the will to speak his own words. He became the first sacrifice to the crown's awakening.",
     "DESCRIPTIONS": [
-      "Your #rMind can no longer replace the #yCocoon #yCages/ #yTears NL When you play a card, trigger its #ytheresa:Thread ."
+      "Your #rMind can no longer replace the #yCocoon #yCages/ #yTears NL When you play a card, trigger its #ytheresa:Thread . If it has no Thread, #ytheresa:Weave it with #yMind.",
+      "Mind",
+      "Can replace #yCocoon #Cages/Tears or be replaced by them. NL #yParticles : increase the toplimit of the effect of your Hopeness and Hatred by #b1 . NL #yWhen #yspread : gain 1 Hopeness or Hatred (Prioritize gaining the lower level one)."
     ]
   },
 

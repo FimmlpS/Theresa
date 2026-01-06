@@ -60,12 +60,13 @@
   },
   "theresa:InFire": {
     "NAME": "战火中的卡兹戴尔",
-    "DESCRIPTION": "theresa:黯淡 。 NL 给予1层 theresa:恨意 。 NL 获得 !M! 层 theresa:恨意 。",
-    "UPGRADE_DESCRIPTION": "theresa:黯淡 。 NL 给予2层 theresa:恨意 。 NL 获得 !M! 层 theresa:恨意 。"
+    "DESCRIPTION": "本回合你每打出一张攻击牌就获得1层 theresa:恨意 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层 theresa:恨意 。 NL 本回合你每打出一张攻击牌就获得1层 theresa:恨意 。"
   },
   "theresa:WhereIsHome": {
     "NAME": "何以为家",
-    "DESCRIPTION": "theresa:黯淡 。 NL 造成 !D! 点伤害。 NL 使场上所有单位获得 !M! 层 theresa:恨意 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若不为自动打出，给予所有单位 !M! 层 theresa:恨意 。",
+    "FLAVOR": "在 #r恨火蔓延 的时代，人们对家园的渴望会愈加扭曲"
   },
   "theresa:LittleTailor": {
     "NAME": "小衣匠",
@@ -73,7 +74,8 @@
   },
   "theresa:Babel": {
     "NAME": "巴别塔",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 使场上所有单位获得 !M! 层 theresa:希望 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 使场上所有单位获得 !M! 层 theresa:希望 。",
+    "FLAVOR": "在 #r希望渺茫 的时代，巴别塔为整个泰拉的未来扎根"
   },
   "theresa:WeaveSpread": {
     "NAME": "编织扩散",
@@ -173,7 +175,7 @@
   },
   "theresa:ThereItIs": {
     "NAME": "■之所在",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL *在手牌中时 ：每当位置发生变化，提升 !M! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 此牌 theresa:丝线 每有1数值，额外造成1次。"
   },
   "theresa:ImperialCourts": {
     "NAME": "众王庭之列",
@@ -241,8 +243,7 @@
   },
   "theresa:IdealReflection": {
     "NAME": "理想的倒影",
-    "DESCRIPTION": "theresa:黯淡 。 NL theresa:萦绕 X次。",
-    "UPGRADE_DESCRIPTION": "theresa:黯淡 。 NL 选择至多X张 theresa:微尘 放入手中。 NL theresa:萦绕 X次。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 丢弃前 !M! 张 theresa:微尘 并将其复制到微尘，使该复制获得 消耗 。"
   },
   "theresa:Starter": {
     "NAME": "启奏",
@@ -287,7 +288,7 @@
   },
   "theresa:FromRose": {
     "NAME": "玫瑰河畔的寄语",
-    "DESCRIPTION": "移除6层 theresa:希望 。 NL 获得1层 theresa:希望 !M! 次。 NL 打出后洗回抽牌堆。"
+    "DESCRIPTION": "将 !M! 张特殊的 *赐血 洗入抽牌堆。 NL 消耗 。"
   },
   "theresa:FutureStop": {
     "NAME": "未来于此消失",
@@ -372,12 +373,15 @@
   },
   "theresa:Finale": {
     "NAME": "破碎终曲",
-    "DESCRIPTION": "theresa:黯淡 。 NL 仅当所有攻击牌和技能牌拥有 theresa:丝线 才能打出。 NL 对所有敌人造成 !D! 点 NL 伤害。",
+    "DESCRIPTION": "theresa:黯淡 。 NL 仅当拥有 theresa:丝线 的牌不少于24张才能打出。 NL 对所有敌人造成 !D! 点 NL 伤害。",
     "FLAVOR": "终局……已至。",
     "EXTENDED_DESCRIPTION": [
       "我的抽牌堆仍有空缺……",
       "我的手牌仍有空缺……",
-      "我的弃牌堆仍有空缺……"
+      "我的弃牌堆仍有空缺……",
+      "还未到结束的时候……",
+      "当前数量：",
+      "/24"
     ]
   },
   "theresa:EternalDust": {
@@ -453,7 +457,11 @@
 
   "theresa:TheGift": {
     "NAME": "赐血",
-    "DESCRIPTION": "不能被打出 。 NL 抽到时获得1层 theresa:恨意 ，使 *盟约：杜卡雷 提升 !M! 点伤害，并抽1张牌。"
+    "DESCRIPTION": "不能被打出 。 NL 抽到时获得1层 theresa:恨意 ，使 *盟约：杜卡雷 提升 !M! 点伤害，并抽1张牌。",
+    "EXTENDED_DESCRIPTION": [
+      "[玫瑰河畔]赐血",
+      "不能被打出 。 NL 抽到时获得1层 theresa:希望 ，使 *盟约：杜卡雷 提升 !M! 点伤害，并抽1张牌。"
+    ]
   },
   "theresa:Originium": {
     "NAME": "“源”",

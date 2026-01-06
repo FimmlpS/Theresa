@@ -2,6 +2,7 @@ package Theresa.card.skill;
 
 import Theresa.card.AbstractTheresaCard;
 import Theresa.power.buff.HopePower;
+import Theresa.screen.TypeSelectScreen;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -18,6 +19,9 @@ public class Babel extends AbstractTheresaCard {
         super(ID,cardStrings.NAME,1,cardStrings.DESCRIPTION,CardType.SKILL,CardRarity.COMMON,CardTarget.ALL);
         baseMagicNumber = magicNumber = 1;
         baseBlock = block = 8;
+        if(TypeSelectScreen.getType()==2){
+            baseMagicNumber = magicNumber = 3;
+        }
     }
 
     @Override

@@ -1,10 +1,14 @@
 package Theresa.action;
 
+import Theresa.card.skill.IdealReflection;
 import Theresa.patch.DustPatch;
 import Theresa.power.buff.EchoismPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+
+import java.util.ArrayList;
 
 public class DustAction extends AbstractGameAction {
 
@@ -27,11 +31,6 @@ public class DustAction extends AbstractGameAction {
 
     @Override
     public void update() {
-//        AbstractPower p = AbstractDungeon.player.getPower(EchoismPower.POWER_ID);
-//        if(p!=null && p.amount>0){
-//            p.onSpecificTrigger();
-//            this.amount += p.amount;
-//        }
         for(int i =0; i<this.amount; i++)
             DustPatch.dustManager.dustIt(addToTop,exhaustIt);
         this.isDone = true;

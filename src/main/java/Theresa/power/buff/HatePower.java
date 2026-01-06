@@ -4,6 +4,7 @@ import Theresa.action.HateAction;
 import Theresa.patch.DustPatch;
 import Theresa.patch.SilkPatch;
 import Theresa.power.AbstractTheresaPower;
+import Theresa.relic.BaMissUsWord;
 import Theresa.relic.TheRecall;
 import Theresa.silk.AbstractSilk;
 import Theresa.silk.MindSilk;
@@ -18,6 +19,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import java.util.ArrayList;
 
@@ -42,6 +44,10 @@ public class HatePower extends AbstractTheresaPower {
                 else
                     addToBot(new ReducePowerAction(owner, owner, HopePower.POWER_ID, 1));
                 addToBot(new ApplyPowerAction(owner,owner,this,1));
+                AbstractRelic ba = AbstractDungeon.player.getRelic(BaMissUsWord.ID);
+                if(ba!=null){
+                    ba.onTrigger();
+                }
             }
         }
     }
@@ -71,7 +77,7 @@ public class HatePower extends AbstractTheresaPower {
         super.onInitialApplication();
         singleUpdate();
         int amt = Math.min(initialMax+extraMax, amount);
-        if(this.owner.isPlayer){
+        if(this.owner.isPlayer || AbstractDungeon.player.hasRelic(BaMissUsWord.ID)){
             addToBot(new DamageAllEnemiesAction(this.owner, DamageInfo.createDamageMatrix(amt,true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE,true));
         }
         else {
@@ -85,7 +91,7 @@ public class HatePower extends AbstractTheresaPower {
         singleUpdate();
         this.flashWithoutSound();
         int amt = Math.min(initialMax+extraMax, amount);
-        if(this.owner.isPlayer){
+        if(this.owner.isPlayer || AbstractDungeon.player.hasRelic(BaMissUsWord.ID)){
             addToBot(new DamageAllEnemiesAction(this.owner, DamageInfo.createDamageMatrix(amt,true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE,true));
         }
         else {
